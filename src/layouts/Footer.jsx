@@ -6,10 +6,10 @@ import StarPu from '../assets/starpu.svg'
 function Footer() {
   return (
     <footer className="relative md:px-24 px-8 py-6 font-montserrat">
-            <img src={StarPu} alt="star" className='absolute bottom-[20%] right-[55%]  w-3 animate-pulse' />
-            <img src={Star} alt="star" className='absolute  top-[25%] right-[35%] w-3 animate-pulse' />
-            <img src={Star} alt="star" className='absolute  bottom-1/2 left-10 w-4 animate-pulse' />
-            <img src={Star} alt="star" className='absolute  bottom-12 right-[15%] w-3 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute bottom-2 right-[55%] md:bottom-[20%] md:right-[55%]  w-3 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:top-[25%] md:right-[35%] top-[25%] left-2 w-3 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:bottom-1/2 md:left-10 bottom-1/2 left-1/2 w-4 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:bottom-12 md:right-[15%] bottom-36 right-[15%] w-3 animate-pulse' />
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
             <div className="flex flex-col justify-between">
