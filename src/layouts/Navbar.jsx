@@ -10,13 +10,13 @@ function Navbar() {
   const closeMenu = () => setIsOpen(false)  
 
   return (
-    <navbar className='md:px-24 px-8 flex justify-between items-center py-6 border-b border-gray-500 relative'>
+    <navbar className='lg:px-24 px-8 flex justify-between items-center py-6 border-b border-gray-500 relative'>
       <div className="absolute md:-top-12 md:left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
       <div className="font-clash-display">
           <Link to='/' className="text-2xl">get<span className="text-secondary font-bold">linked</span></Link>
       </div>
       {/* Mobile icon  */}
-      <button className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
+      <button className="lg:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
         {!isOpen ? (
           <img src={Menu} alt="menu" />
           ) : (
@@ -25,7 +25,7 @@ function Navbar() {
       </button>
       
       {/* Large screen  */}
-      <div className="md:flex md:items-center md:space-x-12 hidden">
+      <div className="lg:flex md:items-center md:space-x-12 hidden">
         <Link to='/timeline'>Timeline</Link>
         <Link to='/overview'>Overview</Link>
         <Link to='/faqs'>FAQs</Link>
@@ -36,7 +36,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu  */}
-      <div className={` md:hidden flex flex-col bg-main absolute top-0 w-full h-96 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
+      <div className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-96 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
         <Link to='/timeline'>Timeline</Link>
         <Link to='/overview'>Overview</Link>
         <Link to='/faqs'>FAQs</Link>

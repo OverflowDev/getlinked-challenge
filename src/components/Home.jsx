@@ -50,7 +50,7 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] top-1/2 left-1/2 w-3 animate-pulse' />
             
             <div className="flex md:justify-end justify-center mt-4">
-                <h2 className="md:text-3xl w-auto md:relative font-semibold italic">
+                <h2 className="lg:text-3xl w-auto md:relative font-semibold italic">
                     Ignitting a Revolution in HR Innovation
                 {/* <TypeAnimation
                     sequence={[
@@ -69,18 +69,18 @@ function Home() {
                     <img 
                         src={Vector} 
                         alt="vector" 
-                        className='absolute md:w-40 w-24 left-64 md:left-96 transform'
+                        className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
                     />
                 </h2>
             </div>  
 
             <div className='md:flex items-center mt-4'>
 
-                <div className='md:max-w-2xl md:mt-0 mt-12'>
-                    <h2 className='md:text-8xl text-5xl md:text-left text-center font-extrabold font-clash-display relative'>
-                        <span className='absolute md:-top-14 md:right-16 -top-6 right-10'><img src={Creative} alt="creative" className='md:w-full w-6' /></span>
+                <div className='lg:max-w-2xl md:mt-0 mt-12'>
+                    <h2 className='lg:text-8xl md:text-2xl text-5xl md:text-left text-center font-extrabold font-clash-display relative'>
+                        <span className='absolute lg:-top-14 md:right-16 -top-6 right-10'><img src={Creative} alt="creative" className='lg:w-full w-6' /></span>
                         getlinked Tech Hackathon <span className='text-secondary'>1.0</span> 
-                        <span className='flex absolute md:bottom-5 bottom-3 md:-right-6 -right-5'><img src={Chain} alt="Chain" className='md:w-14 w-6' /> <img src={Flare} alt="Flare" className='w-5 md:w-12' /> </span>
+                        <span className='flex absolute lg:bottom-5 bottom-3 lg:-right-6 -right-5'><img src={Chain} alt="Chain" className='lg:w-14 w-6' /> <img src={Flare} alt="Flare" className='w-5 lg:w-12' /> </span>
                     </h2>
                     <p className='md:text-left text-center max-w-md mt-3'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
                     {/* Register  */}
@@ -93,7 +93,7 @@ function Home() {
                         </Link>
                     </div>
                     {/* Time  */}
-                    <div className='font-unica-one mt-10 flex md:justify-start justify-center items-center gap-5'>
+                    <div className='font-unica-one mt-10 flex lg:justify-start justify-center items-center gap-5'>
                         <h2 className='text-5xl'>
                             00<span className='text-sm'>H</span>
                         </h2>
@@ -166,7 +166,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[10%] md:left-[20%] w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
-            <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
 
                 <img src={Criteria} alt="idea" className='md:w-6/12' />
 
@@ -196,7 +196,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
 
-            <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
 
                 <div className='flex flex-col max-w-xl md:mt-24 mt-12'>
                     <div className='flex md:justify-start justify-center'>
@@ -462,11 +462,11 @@ function Home() {
                 <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-bold md:text-5xl text-3xl md:text-left text-center'>Prizes and <span className='text-secondary'>Rewards</span></h2>
             </div>
 
-            <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
 
-                <img src={Prize} alt="idea" className='md:w-10/12' />
+                <img src={Prize} alt="idea" className='lg:w-10/12' />
 
-                <div className='flex md:gap-4 gap-2 items-center justify-center md:mt-0 mt-16 w-full font-montserrat'>
+                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-0 mt-16 w-full font-montserrat'>
                     
                     <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
                         <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
@@ -591,11 +591,11 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute bottom-[32%] right-[45%]  w-3 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute top-[20%] right-[60%] w-4 animate-pulse' />
 
-            <div className="md:flex">
+            <div className="lg:flex">
 
-                <div className=' md:w-6/12'>
+                <div className=' lg:w-6/12'>
                     <div className='flex flex-col py-4 mt-4'>
-                        <div className='flex md:justify-end justify-center mt-12'>
+                        <div className='flex lg:justify-end justify-center mt-12'>
                             <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
                         </div>
                         <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
@@ -636,9 +636,9 @@ function Home() {
                     </div>
                 </div>
                 {/* image */}
-                <div className='relative md:mt-0 mt-12 md:py-0 py-8'>
-                    <img src={Shield} alt="shield" className='md:w-10/12' />
-                    <img src={ShieldMan} alt="shield" className='md:w-10/12 w-64 absolute md:bottom-2 md:left-0 bottom-0 top-36 left-8' />
+                <div className='relative md:mt-0 mt-12 lg:py-0 py-8'>
+                    <img src={Shield} alt="shield" className='lg:w-10/12 ' />
+                    <img src={ShieldMan} alt="shield" className='lg:w-10/12 md:w-8/12 w-64 absolute lg:bottom-2 lg:left-0  bottom-0 top-36 left-8' />
                 </div>
             </div>
         </section>
