@@ -146,8 +146,8 @@ function Home() {
 
         {/* Criteria  */}
         <section className="border-b border-gray-700 md:px-24 px-8 relative">
-            <div className="absolute md:top-72 md:left-36 top-72 left-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
-            <div className="absolute -bottom-48 -right-4 md:w-96 md:h-96 w-72 h-72 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute md:top-72 md:left-36 top-16 left-24 md:w-96 md:h-96 w-72 h-72 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute -bottom-48 -right-4 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
             <img src={StarPu} alt="star" className='absolute md:top-[10%] md:left-[20%] w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
