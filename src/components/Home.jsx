@@ -45,9 +45,9 @@ function Home() {
         <section className="relative border-b border-gray-700 md:px-24 px-8">
             {/* Flare  */}
             <div className="absolute md:-top-12 md:left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
-            <img src={Star} alt="star" className='absolute md:top-24 md:left-36 w-3 animate-pulse' />
-            <img src={Star} alt="star" className='absolute md:top-24 md:left-[50%] w-3 animate-pulse' />
-            <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] w-3 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:top-24 md:left-36 top-12 left-24 w-3 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:top-24 md:left-[50%] top-12 right-10 w-2 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] top-1/2 left-1/2 w-3 animate-pulse' />
             
             <div className="flex md:justify-end justify-center mt-4">
                 <h2 className="md:text-3xl w-auto md:relative font-semibold italic">
@@ -127,7 +127,7 @@ function Home() {
                 <img src={Idea} alt="idea" className='md:w-5/12' />
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-20'>
-                    <h2 className='max-w-md font-clash-display font-semibold md:text-4xl text-3xl md:text-left text-center'>Introduction to getlinked <span className='text-secondary'>tech Hackthon 1.0</span></h2>
+                    <h2 className='md:max-w-md font-clash-display font-semibold md:text-4xl text-3xl md:text-left text-center'>Introduction to getlinked <span className='text-secondary'>tech Hackthon 1.0</span></h2>
                     <p className='tracking-wide leading-1 mt-6'>
                         Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform  your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!
                     </p>
@@ -147,7 +147,9 @@ function Home() {
                 <img src={Rules} alt="idea" className='md:w-6/12 order-last' />
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
-                    <h2 className='max-w-sm font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Rules and <span className='text-secondary'>Guidelines</span></h2>
+                    <div className='flex md:justify-start justify-center'>
+                        <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Rules and <span className='text-secondary'>Guidelines</span></h2>
+                    </div>
                     <p className='tracking-wide leading-1 mt-6'>
                         Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform  your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!
                     </p>
@@ -167,7 +169,9 @@ function Home() {
                 <img src={Criteria} alt="idea" className='md:w-6/12' />
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
-                    <h2 className='max-w-sm font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Judging Criteria <span className='text-secondary'>Key attributes</span></h2>
+                    <div className='flex md:justify-start justify-center'>
+                        <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Judging Criteria <span className='text-secondary'>Key attributes</span></h2>
+                    </div>
                     <div className='flex flex-col gap-4 mt-4 font-montserrat'>
                         <h2 className='text-md leading-1 text-key font-medium'>Innovation and Creativity: <span className='text-white'>Evaluate the uniqueness and creativity of the solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features.</span></h2>
                         <h2 className='text-md leading-1 text-key font-medium'>Functionality: <span className='text-white'>Assess how well the solution works. Does it perform its intended functions effectively and without major issues? Judges would consider the completeness and robustness of the solution.</span></h2>
@@ -175,8 +179,9 @@ function Home() {
                         <h2 className='text-md leading-1 text-key font-medium'>Technical Complexity: <span className='text-white'>Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.</span></h2>
                         <h2 className='text-md leading-1 text-key font-medium'>Adherence to Hackathon Rules: <span className='text-white'>Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.</span></h2>
                     </div>
-
-                    <button className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 w-48 rounded-sm mt-12'>Read More</button>
+                    <div className='flex md:justify-start justify-center'>
+                        <button className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 w-48 rounded-sm mt-12'>Read More</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -192,7 +197,9 @@ function Home() {
             <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
 
                 <div className='flex flex-col max-w-xl md:mt-24 mt-12'>
-                    <h2 className='max-w-sm font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
+                    <div className='flex md:justify-start justify-center'>
+                        <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
+                    </div>
                     <p className='mt-4 max-w-md'>We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
 
                     <div className="grid divide-y divide-secondary mt-8">
@@ -450,7 +457,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
 
             <div className='flex md:justify-end justify-center mt-12'>
-                <h2 className='max-w-sm font-clash-display font-bold md:text-5xl text-3xl md:text-left text-center'>Prizes and <span className='text-secondary'>Rewards</span></h2>
+                <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-bold md:text-5xl text-3xl md:text-left text-center'>Prizes and <span className='text-secondary'>Rewards</span></h2>
             </div>
 
             <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
@@ -586,7 +593,9 @@ function Home() {
 
                 <div className=' md:w-6/12'>
                     <div className='flex flex-col py-4 mt-4'>
-                        <h2 className='font-clash-display font-bold text-3xl md:w-64 md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                        <div className='flex md:justify-end justify-center mt-12'>
+                            <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                        </div>
                         <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
                         <p className='text-center md:text-start max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
                     </div>
