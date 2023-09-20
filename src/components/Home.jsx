@@ -24,6 +24,9 @@ import Prize from '../assets/prize.png'
 import GoldM from '../assets/gold_medal.png'
 import Silver from '../assets/silver.svg'
 import Bronze from '../assets/bronze.svg'
+import Shield from '../assets/shield.png'
+import ShieldMan from '../assets/shieldman.png'
+
 
 import Liberty from '../assets/logo/liberty.png'
 import LibertyPay from '../assets/logo/libertypay.png'
@@ -570,18 +573,18 @@ function Home() {
         <section className='border-b border-gray-700 md:px-24 px-8 relative py-12'>
 
             <img src={StarPu} alt="star" className='absolute md:bottom-1/2 md:left-12 w-4 animate-pulse' />
-            <div className="absolute -bottom-24 -left-24 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
-            <img src={Star} alt="star" className='absolute md:bottom-[10%] md:right-[10%] bottom-[47%] right-[10%] w-4 animate-pulse' />
-            <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
-            <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[33%] w-4 animate-pulse' />
-            <img src={StarPu} alt="star" className='absolute md:bottom-[10%] md:right-[40%] w-4 animate-pulse' />
-            <img src={Star} alt="star" className='absolute md:top-[10%] md:right-[40%] w-4 animate-pulse' />
-            <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[33%] w-4 animate-pulse' />
+            <div className="absolute md:-bottom-24 bottom-1/2 md:-left-24 -left-24 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <img src={Star} alt="star" className='absolute  bottom-[47%] right-[10%] w-4 animate-pulse' />
+            <img src={Star} alt="star" className='absolute  top-[20%] right-[30%] w-3 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute bottom-[20%] right-[33%]  w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute  bottom-[15%] right-[50%] w-3 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute bottom-[32%] right-[45%]  w-3 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute top-[20%] right-[60%] w-4 animate-pulse' />
 
-            <div className="flex items-center ">
+            <div className="md:flex">
 
                 <div className=' md:w-6/12'>
-                    <div className='flex flex-col py-4'>
+                    <div className='flex flex-col py-4 mt-4'>
                         <h2 className='font-clash-display font-bold text-3xl md:w-64 md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
                         <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
                         <p className='text-center md:text-start max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
@@ -621,11 +624,14 @@ function Home() {
                     </div>
                 </div>
                 {/* image */}
-                <div className='relative'>
-                    
+                <div className='relative md:mt-0 mt-12 md:py-0 py-8'>
+                    <img src={Shield} alt="shield" className='md:w-10/12' />
+                    <img src={ShieldMan} alt="shield" className='md:w-10/12 w-64 absolute md:bottom-2 md:left-0 bottom-0 top-36 left-8' />
                 </div>
             </div>
         </section>
+
+        
       
     </div>
   )
