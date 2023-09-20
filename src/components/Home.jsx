@@ -20,10 +20,17 @@ import Criteria from '../assets/criteria.png'
 import Question from '../assets/question.png'
 import FAQ from '../assets/faq.png'
 import Prize from '../assets/prize.png'
-import Gold from '../assets/gold.svg'
+// import Gold from '../assets/gold.svg'
 import GoldM from '../assets/gold_medal.png'
 import Silver from '../assets/silver.svg'
 import Bronze from '../assets/bronze.svg'
+
+import Liberty from '../assets/logo/liberty.png'
+import LibertyPay from '../assets/logo/libertypay.png'
+import Paybox from '../assets/logo/Paybox.png'
+import Whishper from '../assets/logo/whisper.png'
+import Winwise from '../assets/logo/winwise.png'
+import Vizual from '../assets/logo/vizual.png'
 
 
 function Home() {
@@ -430,8 +437,8 @@ function Home() {
 
         {/* prize  */}
         <section className='border-b border-gray-700 md:px-24 px-8 relative'>
-            <div className="absolute top-56 left-48 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
-            <div className="absolute -bottom-48 -right-4 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute md:top-56 md:left-48 top-36 left-24 md:w-96 md:h-96 w-72 h-72 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute md:-bottom-48 md:-right-4 -bottom-16 -right-16 md:w-96 md:h-96 w-56 h-56 bg-primary rounded-full blur-3xl opacity-30 "></div>
             <img src={StarPu} alt="star" className='absolute md:top-[10%] md:left-[10%] w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[10%] md:right-[10%] bottom-[47%] right-[10%] w-4 animate-pulse' />
@@ -475,8 +482,8 @@ function Home() {
 
         {/* Partners  */}
         <section className='border-b border-gray-700 md:px-24 px-8 relative py-12'>
-            <div className="absolute top-56 left-48 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
-            <div className="absolute -bottom-48 -right-4 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute md:top-16 md:left-24 top-0 -left-16 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute -bottom-48 -right-4 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
             <img src={Star} alt="star" className='absolute md:bottom-[10%] md:right-[10%] bottom-[47%] right-[10%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
@@ -486,8 +493,137 @@ function Home() {
                 <p className='text-center max-w-md text-sm'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>
             </div>
 
-            <div className='flex justify-center items-center rounded-md border border-secondary w-full h-96 mt-12'>
+            <div className='flex justify-center items-center rounded-md border border-secondary w-full md:h-96 mt-12 relative'>
+                <div className="grid grid-cols-3 py-12">
 
+                    {/* 1 */}
+                    <div className="relative">
+                        <div className="flex items-center justify-center px-8 h-full">
+                            <img src={Liberty} alt="Liberty" className="w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
+                        {/* <!-- Bottom Border --> */}
+                        <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div>
+                    </div>
+
+                    {/* 2 */}
+                    <div className="relative ">
+                        <div className="flex justify-center items-center px-8 h-full">
+                            <img src={LibertyPay} alt="Liberty" className="md:w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
+                        {/* <!-- Bottom Border --> */}
+                        <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div>
+                    </div>
+
+                    {/* 3 */}
+                    <div className="relative ">
+                        <div className="flex justify-center items-center px-8 h-full">
+                            <img src={Winwise} alt="Liberty" className="w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        {/* <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div> */}
+                        {/* <!-- Bottom Border --> */}
+                        <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div>
+                    </div>
+
+                    {/* 4 */}
+                    <div className="relative mt-8">
+                        <div className="flex items-center justify-center px-8 h-full">
+                            <img src={Whishper} alt="Liberty" className="w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
+                        {/* <!-- Bottom Border --> */}
+                        {/* <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div> */}
+                    </div>
+
+                    {/* 5 */}
+                    <div className="relative mt-8">
+                        <div className="flex justify-center items-center px-8 h-full">
+                            <img src={Paybox} alt="Liberty" className="w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
+                        {/* <!-- Bottom Border --> */}
+                        {/* <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div> */}
+                    </div>
+
+                    {/* 6 */}
+                    <div className="relative mt-8">
+                        <div className="flex justify-center items-center px-8 h-full">
+                            <img src={Vizual} alt="Liberty" className="w-28 h-auto" />
+                        </div>
+                        {/* <!-- Right Border --> */}
+                        {/* <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div> */}
+                        {/* <!-- Bottom Border --> */}
+                        {/* <div className="absolute inset-x-2 -bottom-4 h-2 border-b-2 border-secondary"></div> */}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        {/* privacy  */}
+        <section className='border-b border-gray-700 md:px-24 px-8 relative py-12'>
+
+            <img src={StarPu} alt="star" className='absolute md:bottom-1/2 md:left-12 w-4 animate-pulse' />
+            <div className="absolute -bottom-24 -left-24 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <img src={Star} alt="star" className='absolute md:bottom-[10%] md:right-[10%] bottom-[47%] right-[10%] w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[33%] w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute md:bottom-[10%] md:right-[40%] w-4 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:top-[10%] md:right-[40%] w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[33%] w-4 animate-pulse' />
+
+            <div className="flex items-center ">
+
+                <div className=' md:w-6/12'>
+                    <div className='flex flex-col py-4'>
+                        <h2 className='font-clash-display font-bold text-3xl md:w-64 md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                        <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
+                        <p className='text-center md:text-start max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
+                    </div>
+
+                    <div className='mt-4 md:w-9/12 md:p-12 p-8 rounded border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 shadow-lg'>
+                        <p className='text-sm'>
+                            At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy
+                        </p>
+                        <h2 className='font-semibold text-secondary mt-4'>Listening Policy</h2>
+                        <h2 className='mt-3'>Here are terms of our Standard License:</h2>
+                        <div className='flex flex-col py-4'>
+                            <div className="flex items-center justify-between space-x-6 ">
+                                <div className="flex items-center">
+                                    <div className="rounded-full w-6 h-6 bg-green-500 outline-none flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className="text-sm ">The Standard License grants you a non-exclusive right to navigate and register for our event</h2>
+                            </div>
+                            <div className="flex items-center justify-between space-x-6 mt-4">
+                                <div className="flex items-center">
+                                    <div className=" rounded-full w-6 h-6 bg-green-500 outline-none flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className='text-sm'>You are licensed to use the item available at any free source sites, for your project developement</h2>
+                            </div>
+                        </div>
+                        <div className='flex justify-center items-center mt-3'>
+                            <button className='bg-gradient-to-r from-lgrad to-grad py-2 px-6'>Read More</button>
+                        </div>
+                    </div>
+                </div>
+                {/* image */}
+                <div className='relative'>
+                    
+                </div>
             </div>
         </section>
       
