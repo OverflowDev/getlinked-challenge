@@ -68,8 +68,8 @@ function Home() {
                 <div className='md:max-w-2xl md:mt-0 mt-12'>
                     <h2 className='md:text-8xl text-5xl md:text-left text-center font-extrabold font-clash-display relative'>
                         <span className='absolute md:-top-14 md:right-16 -top-6 right-10'><img src={Creative} alt="creative" className='md:w-full w-6' /></span>
-                        getlinked Tech Hackthon <span className='text-secondary'>1.0</span> 
-                        <span className='flex absolute md:bottom-5 bottom-1 md:-right-1 -right-4'><img src={Chain} alt="Chain" className='md:w-14 w-8' /> <img src={Flare} alt="Flare" className='w-6 md:w-12' /> </span>
+                        getlinked Tech Hackathon <span className='text-secondary'>1.0</span> 
+                        <span className='flex absolute md:bottom-5 bottom-3 md:-right-6 -right-5'><img src={Chain} alt="Chain" className='md:w-14 w-6' /> <img src={Flare} alt="Flare" className='w-5 md:w-12' /> </span>
                     </h2>
                     <p className='md:text-left text-center max-w-md mt-3'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
                     {/* Register  */}
@@ -126,8 +126,8 @@ function Home() {
 
         {/* Rules  */}
         <section className="border-b border-gray-700 md:px-24 px-8 relative">
-            <div className="absolute top-36 left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
-            <div className="absolute -bottom-24 -right-4 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
+            <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
+            <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
             <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
