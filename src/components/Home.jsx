@@ -2,7 +2,8 @@
 import { Link } from 'react-router-dom';
 
 
-import Navbar from '../layouts/Navbar';
+// import Navbar from '../layouts/Navbar';
+// import Footer from '../layouts/Footer';
 
 import Vector from '../assets/vector.svg'
 import Man from '../assets/man.png'
@@ -39,7 +40,7 @@ import Vizual from '../assets/logo/vizual.png'
 function Home() {
   return (
     <div className='overflow-hidden'>
-        <Navbar />
+        {/* <Navbar /> */}
         {/* Home  */}
         <section className="relative border-b border-gray-700 md:px-24 px-8">
             {/* Flare  */}
@@ -120,12 +121,12 @@ function Home() {
         <section className="border-b border-gray-700 md:px-24 px-8 relative">
             <img src={StarPu} alt="Pu" className='absolute md:top-64 md:left-36 w-3 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-64 md:right-[10%] bottom-[47%] right-[10%] w-4 animate-pulse' />
-            <img src={Arrow} alt="star" className='absolute md:bottom-20 md:right-[50%] bottom-[48%] right-[45%] w-12 animate-pulse' />
+            <img src={Arrow} alt="star" className='absolute md:bottom-20 md:right-[50%] bottom-[51%] right-[45%] w-12 animate-pulse' />
 
             <div className='md:flex md:justify-between justify-center items-center py-12 mt-4'>
                 <img src={Idea} alt="idea" className='md:w-5/12' />
 
-                <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
+                <div className='flex flex-col max-w-xl md:mt-0 mt-20'>
                     <h2 className='max-w-md font-clash-display font-semibold md:text-4xl text-3xl md:text-left text-center'>Introduction to getlinked <span className='text-secondary'>tech Hackthon 1.0</span></h2>
                     <p className='tracking-wide leading-1 mt-6'>
                         Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform  your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!
@@ -631,7 +632,7 @@ function Home() {
             </div>
         </section>
 
-        
+        {/* <Footer /> */}
       
     </div>
   )

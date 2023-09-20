@@ -10,7 +10,7 @@ function App() {
     <div className="font-montserrat min-h-screen text-white">
       <Router>
 
-        {/* <Navbar /> */}
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
