@@ -127,7 +127,9 @@ function Home() {
                 <img src={Idea} alt="idea" className='md:w-5/12' />
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-20'>
-                    <h2 className='md:max-w-md font-clash-display font-semibold md:text-4xl text-3xl md:text-left text-center'>Introduction to getlinked <span className='text-secondary'>tech Hackthon 1.0</span></h2>
+                    <div className='flex md:justify-start justify-center'>
+                        <h2 className='md:max-w-sm md:w-full font-clash-display font-semibold md:text-4xl text-3xl md:text-left text-center'>Introduction to getlinked <span className='text-secondary'>tech Hackthon 1.0</span></h2>
+                    </div>
                     <p className='tracking-wide leading-1 mt-6'>
                         Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform  your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!
                     </p>
