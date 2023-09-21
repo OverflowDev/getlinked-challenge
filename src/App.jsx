@@ -4,6 +4,7 @@ import Home from "./components/Home"
 import Navbar from "./layouts/Navbar"
 import Footer from "./layouts/Footer"
 import Contact from "./components/Contact"
+import Register from "./auth/Register"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
         {/* <div className="fixed bottom-0 left-0 w-full py-4"> */}
           {/* <Footer /> */}

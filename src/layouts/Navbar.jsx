@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useState } from "react"
 
 import Menu from '../assets/menu.svg'
@@ -31,7 +31,7 @@ function Navbar() {
         <Link to='/faqs'>FAQs</Link>
         <Link to='/contact'>Contact</Link>
         <div>
-            <Link to='register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
+            <Link to='/register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
         </div>
       </div>
 
@@ -42,7 +42,7 @@ function Navbar() {
         <Link to='/faqs'>FAQs</Link>
         <Link to='/contact'>Contact</Link>
         <div>
-            <Link onClick={closeMenu} to='register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
+            <Link onClick={closeMenu} to='/register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
         </div>
       </div>
 

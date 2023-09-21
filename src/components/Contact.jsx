@@ -38,7 +38,8 @@ function Contact() {
             <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
             <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
             <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
-            <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
+            <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
+            <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
             <div className='md:flex md:justify-between md:items-center items-start md:py-12 py-8 w-full h-full'>
                 
@@ -75,11 +76,11 @@ function Contact() {
                     <div className='md:p-12 p-4 md:w-3/4 md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                         <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                         <h3 className='block md:hidden mb-12'>Email us below to any question related to our event</h3>
-                        <div className='flex-col '>
+                        <div className='flex-col mt-4'>
                             <form>
                                 <input 
                                     type="text" 
-                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur mt-4 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur  py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                     placeholder='First Name'
                                 />
                                 <input 
