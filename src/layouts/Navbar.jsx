@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import { useState } from "react"
 
 import Menu from '../assets/menu.svg'
@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <navbar className='lg:px-24 px-8 flex justify-between items-center py-6 border-b border-gray-500 relative'>
-      <div className="absolute md:-top-12 md:left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
+      {/* <div className="absolute md:-top-12 md:left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div> */}
       <div className="font-clash-display">
           <Link to='/' className="text-2xl">get<span className="text-secondary font-bold">linked</span></Link>
       </div>

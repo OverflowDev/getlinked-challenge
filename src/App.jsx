@@ -11,14 +11,15 @@ function App() {
     <div className="font-montserrat min-h-screen text-white">
       <Router>
 
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-
-        <Footer />
+        {/* <div className="fixed bottom-0 left-0 w-full py-4"> */}
+          {/* <Footer /> */}
+        {/* </div> */}
       </Router>
     </div>
   )
