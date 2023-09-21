@@ -110,7 +110,7 @@ function Home() {
                     <div className='mt-8 flex md:justify-start justify-center'>
                         <Link 
                             to='/register'
-                            className='bg-gradient-to-r from-lgrad to-grad py-3 px-12 rounded-sm'
+                            className='bg-gradient-to-r from-lgrad to-grad py-3 px-12 rounded-sm z-50'
                         >
                             Register
                         </Link>
@@ -131,7 +131,7 @@ function Home() {
 
                 <div className='md:mt-0 mt-[88px]'>
                     {/* Flare  */}
-                    <div className="absolute top-24 right-36 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                    <div className="absolute top-24 right-36 md:w-96 w-64 md:h-96 h-64 bg-primary rounded-full blur-3xl opacity-20 "></div>
                     <img src={Planet} alt="planet" className='absolute md:w-5/12 w-80' />
                     <img src={Man} alt="man" className='md:w-full border' />
                     <img src={Metrix} alt="man" className='absolute top-24 md:-right-0 w-96 h-96' />
