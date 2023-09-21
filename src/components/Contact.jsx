@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
+import toast, { Toaster } from 'react-hot-toast'
+
 import Star from '../assets/star.svg'
 import StarPu from '../assets/starpu.svg'
 import Navbar from '../layouts/Navbar'
@@ -20,8 +22,39 @@ function Contact() {
         };
     }, []);
 
+    const [formData, setFormData] = useState({
+        email: '',
+        phone_number: '',
+        first_name: '',
+        message: '',
+    })
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault()
+
+        console.log(formData)
+        if(
+            formData.email.trim() !== '' &&
+            formData.phone_number.trim() !== '' &&
+            formData.first_name.trim() !== '' &&
+            formData.message.trim() !== ''
+        ) {
+            toast.success('Success')
+        } else {
+            toast.error('check all your details')
+        }
+    }
+
   return (
     <div className='overflow-hidden h-screen '>
+        <Toaster />
         {isDesktop ? (
             <Navbar /> 
         ) : (
@@ -77,28 +110,43 @@ function Contact() {
                         <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                         <h3 className='block md:hidden mb-12'>Email us below to any question related to our event</h3>
                         <div className='flex-col mt-4'>
-                            <form>
+                            <form onSubmit={handleFormSubmit}>
                                 <input 
-                                    type="text" 
+                                    type="text"
+                                    name='first_name'
+                                    value={formData.first_name}
+                                    onChange={handleInputChange}
                                     className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur  py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                     placeholder='First Name'
+                                    required
                                 />
                                 <input 
-                                    type="email" 
+                                    type="email"
+                                    name='email'
+                                    value={formData.email}
+                                    onChange={handleInputChange}
                                     className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                     placeholder='Email'
+                                    required
                                 />
                                 <input 
-                                    type="number" 
-                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                    type="number"
+                                    name='phone_number'
+                                    value={formData.phone_number}
+                                    onChange={handleInputChange}
+                                    className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                     placeholder='Phone Number'
+                                    required
                                 />
                                 <textarea 
                                     className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                     name="message" 
+                                    value={formData.message}
+                                    onChange={handleInputChange}
                                     cols="5" 
                                     rows="3"
                                     placeholder='Message'
+                                    required
                                 ></textarea>
 
                                 <div className='flex justify-center mx-auto mt-6'>

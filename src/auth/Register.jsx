@@ -21,11 +21,43 @@ function Register() {
         };
     }, []);
 
-    const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+    // const [isTermsAccepted, setIsTermsAccepted] = useState(false);
 
-    const handleTermsAcceptance = () => {
-        setIsTermsAccepted(!isTermsAccepted);
-    };
+    // const handleTermsAcceptance = () => {
+    //     setIsTermsAccepted(!isTermsAccepted);
+    // };
+
+    const [formData, setFormData] = useState({
+        email: '',
+        phone_number: '',
+        team_name: '',
+        project_topic: '',
+        category: '',
+        group_size: '1',
+        privacy_poclicy_accepted: false
+    })
+
+    const handleInputChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleCheckboxChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.checked
+        })
+    }
+
+    // console.log(formData)
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault()
+
+        console.log(formData)
+    }
 
   return (
     <div className='overflow-hidden h-screen '>
@@ -38,7 +70,7 @@ function Register() {
                     <ion-icon name="chevron-back-outline"></ion-icon>
                 </div>
             </Link>
-            <h2 className="text-lgrad">Register</h2>
+            <h2 className="text-white">Register</h2>
         </nav>
     )}
 
@@ -57,20 +89,23 @@ function Register() {
 
             <div className='lg:w-7/12 md:h-max h-full md:mt-4'>
                 <div className='md:p-12 p-4 md:w-full md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
-                    <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Register</h2>
-                    <div className="flex items-center md:mt-4">
+                    <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-3xl text-xl font-bold '>Register</h2>
+                    <div className="flex items-center md:mt-5">
                         <h2 className="text-sm">Be part of this movement</h2>
                         {/* <img src={movement} alt="movement" /> */}
                     </div>
                     <h2 className='md:text-2xl text-xl mt-0 font-semibold'>CREATE YOUR ACCOUNT</h2>
 
                     <div className='md:mt-6 mt-2'>
-                        <form>
+                        <form onSubmit={handleFormSubmit}>
                             <div className="flex flex-wrap md:gap-6 gap-4">
 
                                 <div className="w-full md:w-72">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">Email</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="email">Email</label>
                                     <input 
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
                                         type="email" 
                                         className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                         placeholder='Email'
@@ -78,44 +113,64 @@ function Register() {
                                     />
                                 </div>
                                 <div className="w-full md:w-72">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">First Name</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="phone_number">Phone Number</label>
                                     <input 
-                                        type="number" 
-                                        className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                        name="phone_number"
+                                        type="number"
+                                        value={formData.phone_number}
+                                        onChange={handleInputChange}
+                                        className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none appearance-none'
                                         placeholder='Phone Number'
                                         required
                                     />
                                 </div>
                                 <div className="w-full md:w-72 ">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">Team Name</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team Name</label>
                                     <input 
+                                        name="team_name"
+                                        value={formData.team_name}
+                                        onChange={handleInputChange}
                                         type="text" 
                                         className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        placeholder='First Name'
+                                        placeholder='Team Name'
+                                        required
                                     />
                                 </div>
                                 <div className="w-full md:w-72 ">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">Project Topic</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="project_topic">Project Topic</label>
                                     <input 
                                         type="text" 
+                                        name="project_topic"
+                                        value={formData.project_topic}
+                                        onChange={handleInputChange}
                                         className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        placeholder='First Name'
+                                        placeholder='Project Topic'
+                                        required
                                     />
                                 </div>
                                 <div className="w-48 md:w-72 ">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">Category</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
                                     <select 
                                         name="category"
+                                        value={formData.category}
+                                        onChange={handleInputChange}
                                         className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
                                     >
+                                        <option
+                                            value=''
+                                            disabled
+                                            className="bg-secondary"
+                                        >
+                                            Select Category
+                                        </option>
                                         <option 
-                                            value=""
+                                            value="1"
                                             className="bg-secondary"
                                         >
                                             Love
                                         </option>
                                         <option 
-                                            value=""
+                                            value="2"
                                             className="bg-secondary"
                                         >
                                             Hate
@@ -123,22 +178,72 @@ function Register() {
                                     </select>
                                 </div>
                                 <div className="w-24 md:w-72 ">
-                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="name">Group size</label>
+                                    <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
                                     <select 
-                                        name="category"
+                                        name="group_size"
+                                        value={formData.group_size}
+                                        onChange={handleInputChange}
                                         className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
                                     >
                                         <option 
-                                            value=""
+                                            value="1"
                                             className="bg-secondary"
                                         >
                                             1
                                         </option>
                                         <option 
-                                            value=""
+                                            value="2"
                                             className="bg-secondary"
                                         >
-                                            1
+                                            2
+                                        </option>
+                                        <option 
+                                            value="3"
+                                            className="bg-secondary"
+                                        >
+                                            3
+                                        </option>
+                                        <option 
+                                            value="4"
+                                            className="bg-secondary"
+                                        >
+                                            4
+                                        </option>
+                                        <option 
+                                            value="5"
+                                            className="bg-secondary"
+                                        >
+                                            5
+                                        </option>
+                                        <option 
+                                            value="6"
+                                            className="bg-secondary"
+                                        >
+                                            6
+                                        </option>
+                                        <option 
+                                            value="7"
+                                            className="bg-secondary"
+                                        >
+                                            7
+                                        </option>
+                                        <option 
+                                            value="8"
+                                            className="bg-secondary"
+                                        >
+                                            8
+                                        </option>
+                                        <option 
+                                            value="9"
+                                            className="bg-secondary"
+                                        >
+                                            9
+                                        </option>
+                                        <option 
+                                            value="10"
+                                            className="bg-secondary"
+                                        >
+                                            10
                                         </option>
                                     </select>
                                     
@@ -150,9 +255,11 @@ function Register() {
 
                             <label className="text-sm">
                                 <input
+                                    name="privacy_poclicy_accepted"
                                     type="checkbox"
-                                    checked={isTermsAccepted}
-                                    onChange={handleTermsAcceptance}
+                                    checked={formData.privacy_poclicy_accepted}
+                                    onChange={handleCheckboxChange}
+                                    required
                                 />
                                 I agreed with the event terms and conditions and privacy policy
                             </label>
@@ -161,7 +268,6 @@ function Register() {
                                 <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>Register Now</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
