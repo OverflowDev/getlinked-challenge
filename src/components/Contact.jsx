@@ -23,6 +23,8 @@ function Contact() {
         };
     }, []);
 
+    const [loading, setLoading] = useState(false)
+
     const [formData, setFormData] = useState({
         email: '',
         phone_number: '',
@@ -41,12 +43,13 @@ function Contact() {
         e.preventDefault()
 
         try {
-            const response = await axios.post('https://backend.getlinked.ai/hackathon/contact-form', formData
-            )
+            const response = await axios.post('https://backend.getlinked.ai/hackathon/contact-form', formData)
+
+            setLoading(true)
             
             if(response?.status === 201) {
+                setLoading(false)
                 toast.success('Form submitted')
-                console.log(response)
                 setFormData({
                     email: '',
                     phone_number: '',
@@ -163,7 +166,9 @@ function Contact() {
                                     ></textarea>
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-4'>
-                                        <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>Submit</button>
+                                        <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>
+                                            {loading ? 'Loading...' : 'Submit'}
+                                        </button>
                                     </div>
                                 </form>
 

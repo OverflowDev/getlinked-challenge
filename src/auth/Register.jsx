@@ -5,13 +5,14 @@ import axios from "axios";
 
 import toast, { Toaster } from 'react-hot-toast'
 
-import ErrorAlert from "../lib/ErrorAlert";
+// import ErrorAlert from "../lib/ErrorAlert";
 
 import Navbar from '../layouts/Navbar'
 
 import RegistrationVector from '../assets/registration.svg'
 import Star from '../assets/star.svg'
 import StarPu from '../assets/starpu.svg'
+import SuccessModal from "../modal/SuccessModal";
 
 function Register() {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); // Adjust the breakpoint as needed
@@ -20,6 +21,10 @@ function Register() {
 
     // const [errors, setErrors] = useState([]);
     const [loading, setLoading] = useState(false)
+    const [successModal, setSuccessModal] = useState(false)
+
+    const handleModalClose = () => setSuccessModal(false)
+
 
     useEffect(() => {
         function handleResize() {
@@ -80,9 +85,11 @@ function Register() {
             const response = await axios.post('https://backend.getlinked.ai/hackathon/registration', formData)
             setLoading(true)
             
-            if(response?.status === 201) {
-                toast.success('Form submitted')
+            if(response && response?.status === 201) {
+
+                setSuccessModal(true)
                 setLoading(false)
+
                 setFormData({
                     email: '',
                     phone_number: '',
@@ -92,6 +99,8 @@ function Register() {
                     group_size: '1',
                     privacy_poclicy_accepted: false
                 })
+
+                toast.success('Form submitted')
                 // setErrors([]);
             } else {
                 console.log('something is not right')
@@ -340,8 +349,10 @@ function Register() {
                     </div>
                 </div>
             </div>
+            {/* modal  */}
+            <SuccessModal onClose={handleModalClose} visible={successModal} />
         </div>
-</div>
+    </div>
   )
 }
 

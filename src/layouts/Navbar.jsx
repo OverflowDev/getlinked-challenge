@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { useState } from "react"
 
 import Menu from '../assets/menu.svg'
 import Close from '../assets/close.svg'
 
 function Navbar() {
+
+  let location = useLocation()
 
   const [isOpen, setIsOpen] = useState(false)
   const closeMenu = () => setIsOpen(false)  
@@ -29,9 +31,9 @@ function Navbar() {
         <Link to='/timeline'>Timeline</Link>
         <Link to='/overview'>Overview</Link>
         <Link to='/faqs'>FAQs</Link>
-        <Link to='/contact'>Contact</Link>
+        <Link to='/contact' className={location.pathname === '/contact' ? 'bg-gradient-to-r from-lgrad to-secondary bg-clip-text text-transparent ' : 'text-white'}>Contact</Link>
         <div>
-            <Link to='/register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
+            <Link to='/register' className={location.pathname === '/register' ? 'border-2 border-y-lgrad border-x-secondary py-2 px-8 md:ml-36 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm'}>Register</Link>
         </div>
       </div>
 
