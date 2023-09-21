@@ -106,7 +106,7 @@ function Contact() {
                 </div>
 
                 <div className='lg:w-6/12 '>
-                    <div className='md:p-12 border p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
+                    <div className='md:p-12 p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                         <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                         <h3 className='block md:hidden md:mb-12 mb-6'>Email us below to any question related to our event</h3>
                         <div className='flex-col md:mt-4'>

@@ -75,7 +75,7 @@ function Register() {
     }
 
   return (
-    <div className='overflow-hidden h-screen border-4 border-red-500'>
+    <div className='overflow-hidden h-screen'>
         <Toaster />
 
     {isDesktop ? (
@@ -91,20 +91,20 @@ function Register() {
         </nav>
     )}
 
-    <div className='md:px-24 px-8 flex items-center relative border'>
+    <div className='md:px-24 px-8 flex items-center relative'>
         <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
         <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
         <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
         <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
         <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-        <div className='md:flex  md:py-8 py-2 w-full h-full'>
+        <div className='md:flex md:py-8 w-full h-full'>
             
-            <div className='md:mt-0 flex justify-center md:w-6/12'>
+            <div className='md:mt-0 hidden lg:flex justify-center sm:justify-center md:w-6/12'>
                 <img src={RegistrationVector} alt="Register" className="md:w-full w-7/12" />
             </div>
 
-            <div className='lg:w-7/12 md:h-max h-full md:mt-4'>
+            <div className='lg:w-7/12 md:h-max h-full md:mt-4 '>
                 <div className='md:p-12 p-4 md:w-full md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                     <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-3xl text-xl font-bold '>Register</h2>
                     <div className="flex items-center md:mt-5 mt-1">
@@ -165,7 +165,7 @@ function Register() {
                                         required
                                     />
                                 </div>
-                                <div className="md:w-36 lg::w-72 ">
+                                <div className="w-44 md:w-48 lg:w-72 ">
                                     <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
                                     <select 
                                         name="category"
@@ -193,7 +193,7 @@ function Register() {
                                         ))}
                                     </select>
                                 </div>
-                                <div className="w-24 md:w-72 ">
+                                <div className="w-20 md:w-72 ">
                                     <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
                                     <select 
                                         name="group_size"
@@ -267,7 +267,7 @@ function Register() {
 
                             </div>
 
-                            <h2 className="italic text-secondary md:text-sm text-[10px] mt-4">Please revieew your registration details before submitting</h2>
+                            <h2 className="italic text-secondary md:text-sm text-[10px] mt-2">Please revieew your registration details before submitting</h2>
 
                             <label className="text-sm">
                                 <input
