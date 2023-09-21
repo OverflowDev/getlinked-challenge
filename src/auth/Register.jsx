@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 
+import axios from "axios";
+
+import toast, { Toaster } from 'react-hot-toast'
+
+
 import Navbar from '../layouts/Navbar'
 
 import RegistrationVector from '../assets/registration.svg'
@@ -9,6 +14,8 @@ import StarPu from '../assets/starpu.svg'
 
 function Register() {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); // Adjust the breakpoint as needed
+
+    const [categories, setCategories] = useState([])
 
     useEffect(() => {
         function handleResize() {
@@ -21,11 +28,20 @@ function Register() {
         };
     }, []);
 
-    // const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+    useEffect(() => {
+      const getCategories = async () => {
+        try {
+            const res =await axios.get('https://backend.getlinked.ai/hackathon/categories-list')
+            setCategories(res?.data)
+        } catch (error) {
+            console.log(error)
+            toast.error(error)
+        }
 
-    // const handleTermsAcceptance = () => {
-    //     setIsTermsAccepted(!isTermsAccepted);
-    // };
+      }
+
+      getCategories()
+    }, [])
 
     const [formData, setFormData] = useState({
         email: '',
@@ -56,15 +72,16 @@ function Register() {
     const handleFormSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(formData)
     }
 
   return (
-    <div className='overflow-hidden h-screen '>
+    <div className='overflow-hidden h-screen border-4 border-red-500'>
+        <Toaster />
+
     {isDesktop ? (
         <Navbar /> 
     ) : (
-        <nav className='py-6 md:px-24 px-8 flex justify-between'>
+        <nav className='py-5 md:px-16 px-8 flex justify-between'>
             <Link to='/' className='md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-lgrad to-secondary'>
                 <div className='w-7 h-7 rounded-full flex items-center justify-center bg-main'>
                     <ion-icon name="chevron-back-outline"></ion-icon>
@@ -74,14 +91,14 @@ function Register() {
         </nav>
     )}
 
-    <div className='md:px-24 px-8 flex items-center relative'>
+    <div className='md:px-24 px-8 flex items-center relative border'>
         <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
         <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
         <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
         <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
         <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-        <div className='md:flex  md:py-8 py-2 w-full'>
+        <div className='md:flex  md:py-8 py-2 w-full h-full'>
             
             <div className='md:mt-0 flex justify-center md:w-6/12'>
                 <img src={RegistrationVector} alt="Register" className="md:w-full w-7/12" />
@@ -90,7 +107,7 @@ function Register() {
             <div className='lg:w-7/12 md:h-max h-full md:mt-4'>
                 <div className='md:p-12 p-4 md:w-full md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                     <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-3xl text-xl font-bold '>Register</h2>
-                    <div className="flex items-center md:mt-5">
+                    <div className="flex items-center md:mt-5 mt-1">
                         <h2 className="text-sm">Be part of this movement</h2>
                         {/* <img src={movement} alt="movement" /> */}
                     </div>
@@ -148,7 +165,7 @@ function Register() {
                                         required
                                     />
                                 </div>
-                                <div className="w-48 md:w-72 ">
+                                <div className="md:w-36 lg::w-72 ">
                                     <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
                                     <select 
                                         name="category"
@@ -159,22 +176,21 @@ function Register() {
                                         <option
                                             value=''
                                             disabled
-                                            className="bg-secondary"
+                                            className="bg-main"
                                         >
                                             Select Category
                                         </option>
-                                        <option 
-                                            value="1"
-                                            className="bg-secondary"
-                                        >
-                                            Love
-                                        </option>
-                                        <option 
-                                            value="2"
-                                            className="bg-secondary"
-                                        >
-                                            Hate
-                                        </option>
+                                        {categories.map(cat => (
+                                            // <div key={cat.id}>
+                                            <option 
+                                                key={cat.id}
+                                                value={cat.id}
+                                                className="bg-main"
+                                            >
+                                                {cat.name}
+                                            </option>
+                                            // </div>
+                                        ))}
                                     </select>
                                 </div>
                                 <div className="w-24 md:w-72 ">

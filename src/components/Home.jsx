@@ -107,7 +107,7 @@ function Home() {
                     </h2>
                     <p className='md:text-left text-center max-w-md mt-3'>Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</p>
                     {/* Register  */}
-                    <div className='mt-8  flex md:justify-start justify-center'>
+                    <div className='mt-8 flex md:justify-start justify-center'>
                         <Link 
                             to='/register'
                             className='bg-gradient-to-r from-lgrad to-grad py-3 px-12 rounded-sm'

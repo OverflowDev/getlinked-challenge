@@ -67,14 +67,14 @@ function Contact() {
             </nav>
         )}
 
-        <div className='md:px-24 px-8 h-full flex items-center relative'>
+        <div className='lg:px-24 px-8 flex items-center relative'>
             <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
             <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
             <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-            <div className='md:flex md:justify-between md:items-center items-start md:py-12 py-8 w-full h-full'>
+            <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 md:py-6 sm:py-2 w-full h-full'>
                 
                 <div className='hidden md:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
                     <div className='md:flex md:justify-start justify-center hidden'>
@@ -105,11 +105,11 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='lg:w-6/12 md:h-max h-full'>
-                    <div className='md:p-12 p-4 md:w-3/4 md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
+                <div className='lg:w-6/12 '>
+                    <div className='md:p-12 border p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                         <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
-                        <h3 className='block md:hidden mb-12'>Email us below to any question related to our event</h3>
-                        <div className='flex-col mt-4'>
+                        <h3 className='block md:hidden md:mb-12 mb-6'>Email us below to any question related to our event</h3>
+                        <div className='flex-col md:mt-4'>
                             <form onSubmit={handleFormSubmit}>
                                 <input 
                                     type="text"
@@ -149,12 +149,12 @@ function Contact() {
                                     required
                                 ></textarea>
 
-                                <div className='flex justify-center mx-auto mt-6'>
+                                <div className='flex justify-center mx-auto md:mt-6 mt-4'>
                                     <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>Submit</button>
                                 </div>
                             </form>
 
-                            <div className='md:hidden flex justify-center items-center flex-col mt-12'>
+                            <div className='md:hidden flex justify-center items-center flex-col md:mt-12 mt-4'>
                                 <h2 className="text-secondary text-sm font-bold">Follow us</h2>
                                 <div className='flex items-center space-x-2 mt-2'>
                                     <ion-icon name="logo-instagram"></ion-icon>
