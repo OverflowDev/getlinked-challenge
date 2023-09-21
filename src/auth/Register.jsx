@@ -185,6 +185,7 @@ function Register() {
                                                 className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none appearance-none'
                                                 placeholder='Phone Number'
                                                 required
+                                                maxLength='13'
                                             />
                                         </div>
                                         <div className="w-full md:w-72 ">
