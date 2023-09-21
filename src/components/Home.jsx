@@ -133,7 +133,7 @@ function Home() {
                     {/* Flare  */}
                     <div className="absolute top-24 right-36 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
                     <img src={Planet} alt="planet" className='absolute md:w-5/12 w-80' />
-                    <img src={Man} alt="man" className='md:w-full ' />
+                    <img src={Man} alt="man" className='md:w-full border' />
                     <img src={Metrix} alt="man" className='absolute top-24 md:-right-0 w-96 h-96' />
                 </div>
             </div>

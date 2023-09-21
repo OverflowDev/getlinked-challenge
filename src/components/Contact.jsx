@@ -53,8 +53,8 @@ function Contact() {
     }
 
   return (
-    <div className='overflow-hidden'>
-        <div className='h-screen'>
+    <div className='overflow-x-hidden border'>
+        <div className='h-full'>
             <Toaster />
             {isDesktop ? (
                 <Navbar /> 
@@ -69,8 +69,8 @@ function Contact() {
             )}
 
             <div className='lg:px-24 px-8 flex items-center relative'>
-                <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
-                <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                {/* <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div> */}
                 <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
