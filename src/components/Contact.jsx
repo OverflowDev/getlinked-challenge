@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react"
+import axios from 'axios'
 
 import toast, { Toaster } from 'react-hot-toast'
 
@@ -39,17 +40,28 @@ function Contact() {
     const handleFormSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(formData)
-        if(
-            formData.email.trim() !== '' &&
-            formData.phone_number.trim() !== '' &&
-            formData.first_name.trim() !== '' &&
-            formData.message.trim() !== ''
-        ) {
-            toast.success('Success')
-        } else {
-            toast.error('check all your details')
+        try {
+            const response = await axios.post('https://backend.getlinked.ai/hackathon/contact-form', formData
+            )
+            
+            if(response?.status === 201) {
+                toast.success('Form submitted')
+                console.log(response)
+                setFormData({
+                    email: '',
+                    phone_number: '',
+                    first_name: '',
+                    message: '',
+                })
+            } else {
+                console.log('something is not right')
+            }
+        } catch (error) {
+            console.log(error?.response?.data)
+            toast.error('Something is not right!!!')
         }
+
+        
     }
 
   return (
@@ -75,7 +87,7 @@ function Contact() {
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-                <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 py-8 w-full h-full'>
+                <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 py-4 w-full h-full'>
                     
                     <div className='hidden md:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
                         <div className='md:flex md:justify-start justify-center hidden'>

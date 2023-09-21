@@ -5,6 +5,7 @@ import axios from "axios";
 
 import toast, { Toaster } from 'react-hot-toast'
 
+import ErrorAlert from "../lib/ErrorAlert";
 
 import Navbar from '../layouts/Navbar'
 
@@ -16,6 +17,9 @@ function Register() {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); // Adjust the breakpoint as needed
 
     const [categories, setCategories] = useState([])
+
+    // const [errors, setErrors] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         function handleResize() {
@@ -72,6 +76,37 @@ function Register() {
     const handleFormSubmit = async (e) => {
         e.preventDefault()
 
+        try {
+            const response = await axios.post('https://backend.getlinked.ai/hackathon/registration', formData)
+            setLoading(true)
+            
+            if(response?.status === 201) {
+                toast.success('Form submitted')
+                setLoading(false)
+                setFormData({
+                    email: '',
+                    phone_number: '',
+                    team_name: '',
+                    project_topic: '',
+                    category: '',
+                    group_size: '1',
+                    privacy_poclicy_accepted: false
+                })
+                // setErrors([]);
+            } else {
+                console.log('something is not right')
+            }
+        } catch (error) {
+            toast.error('Something is not right!!!')
+            if (error.response && error.response.data) {
+                // setErrors(error.response.data);
+                console.log(error.response.data)
+            } else {
+                console.error(error);
+            }
+        }
+
+
     }
 
   return (
@@ -94,8 +129,8 @@ function Register() {
             )}
 
             <div className='md:px-24 px-8 flex items-center relative '>
-                <div className="absolute md:top-36 md:left-36 top-24 right-24 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20 "></div>
-                <div className="absolute -bottom-24 -right-4 md:w-96 w-72 md:h-96 h-72 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                <div className="absolute md:top-36 md:left-36 top-24 right-24 w-56 h-56 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                <div className="absolute md:-bottom-24 md:-right-4 -bottom-48 -right-4 md:w-96 w-48 md:h-96  h-48 bg-primary rounded-full blur-3xl opacity-20 "></div>
                 <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
@@ -283,9 +318,23 @@ function Register() {
                                     </label>
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-8'>
-                                        <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>Register Now</button>
+                                        <button 
+                                            type='submit' 
+                                            className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'
+                                        >   
+                                            {loading ? 'Loading...' : 'Register Now'}
+                                            {/* Register Now */}
+                                        </button>
                                     </div>
                                 </form>
+
+                                    {/* {errors && (
+                                        <ul className="text-white">
+                                            {errors.map((error, index) => (
+                                                <li key={index}>{error}</li>
+                                            ))}
+                                        </ul>
+                                    )} */}
                             </div>
                         </div>
                     </div>
