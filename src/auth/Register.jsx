@@ -181,7 +181,7 @@ function Register() {
                                                 required
                                             />
                                             {errors.email && (
-                                                <div className="mt-1 text-sm text-red-500">
+                                                <div className="mt-1 text-xs text-red-500">
                                                     {errors?.email.map((error, index) => (
                                                         <span key={index}>{error}</span>
                                                     ))}
@@ -206,7 +206,7 @@ function Register() {
                                                 maxLength='13'
                                             />
                                             {errors.phone_number && (
-                                                <div className="mt-1 text-sm text-red-500">
+                                                <div className="mt-1 text-xs text-red-500">
                                                     {errors?.phone_number.map((error, index) => (
                                                         <span key={index}>{error}</span>
                                                     ))}
