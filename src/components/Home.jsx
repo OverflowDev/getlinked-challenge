@@ -59,12 +59,12 @@ function Home() {
                         {/* <Typist avgTypingDelay={100}> */}
                             Ignitting a Revolution in HR Innovation
                         {/* </Typist> */}
+                        <img 
+                            src={Vector} 
+                            alt="vector" 
+                            className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
+                        />
                     </h2>
-                <img 
-                    src={Vector} 
-                    alt="vector" 
-                    className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
-                />
             </div>  
 
             <div className='md:flex items-center mt-4'>

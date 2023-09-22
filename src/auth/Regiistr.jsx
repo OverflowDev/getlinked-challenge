@@ -167,7 +167,7 @@ function Register() {
     }
 
   return (
-    <div className='overflow-hidden'>
+    <div className='h-screen border-4 border-red-400'>
         {/* <div className="border h-screen"> */}
 
             <Toaster />
@@ -175,7 +175,7 @@ function Register() {
             {isDesktop ? (
                 <Navbar /> 
             ) : (
-                <nav className='py-5 md:px-16 px-8 flex justify-between'>
+                <nav className='py-5 md:px-16 px-8 flex justify-between border'>
                     <Link to='/' className='md:hidden flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-lgrad to-secondary'>
                         <div className='w-7 h-7 rounded-full flex items-center justify-center bg-main'>
                             <ion-icon name="chevron-back-outline"></ion-icon>
@@ -185,21 +185,21 @@ function Register() {
                 </nav>
             )}
 
-            <div className='md:px-24 px-8 flex items-center relative'>
-                <div className="absolute md:top-36 md:left-36 top-24 right-24 w-56 h-56 bg-primary rounded-full blur-3xl opacity-20 "></div>
-                <div className="absolute md:-bottom-36 md:-right-4 md:w-96 w-48 md:h-96  h-48 bg-primary rounded-full blur-3xl opacity-20 "></div>
+            <div className='md:px-24 px-8 flex items-center relative border'>
+                {/* <div className="absolute md:top-36 md:left-36 top-24 right-24 w-56 h-56 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                <div className="absolute md:-bottom-24 md:-right-4 -bottom-48 -right-4 md:w-96 w-48 md:h-96  h-48 bg-primary rounded-full blur-3xl opacity-20 "></div> */}
                 <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-                <div className='md:flex lg:py-4 md:py-6 sm:py-1 w-full h-full'>
+                <div className='md:flex md:py-8 py-6 w-full h-full'>
                     
                     <div className='md:mt-0 hidden lg:flex justify-center sm:justify-center md:w-6/12'>
                         <img src={RegistrationVector} alt="Register" className="md:w-full w-7/12" />
                     </div>
 
-                    <div className='lg:w-7/12 md:h-max h-max md:mt-3  mt-0'>
-                        <div className=' md:w-full md:p-12 p-2 h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
+                    <div className='lg:w-7/12 md:mt-4 '>
+                        <div className='md:p-12 p-4 md:w-full md:h-full h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                             <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-3xl text-xl font-bold '>Register</h2>
                             <div className="flex items-center md:mt-5 mt-6">
                                 <h2 className="text-sm">Be part of this movement</h2>
