@@ -20,6 +20,13 @@ function Register() {
     const [categories, setCategories] = useState([])
 
     const [errors, setErrors] = useState([]);
+    const [formErrors, setFormErrors] = useState({
+        email: '',
+        phone_number: ''
+    })
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^\d{1,13}$/;
 
     const [loading, setLoading] = useState(false)
     const [successModal, setSuccessModal] = useState(false)
@@ -64,6 +71,46 @@ function Register() {
         privacy_poclicy_accepted: false
     })
 
+    const handleBlur = (e) => {
+        // setFormData({
+        //     ...formData,
+        //     [e.target.name]: e.target.value
+        // })
+        const {name, value} = e.target
+
+        // validate email and number 
+        if(name === 'email') {
+            if(!emailRegex.test(value)) {
+                setFormErrors({
+                    ...formErrors,
+                    email: 'Invalid Email address'
+                })
+            } else {
+                setFormErrors({
+                    ...formErrors,
+                    email: ''
+                })
+            }
+        } else if(name === 'phone_number') {
+            if(!phoneRegex.test(value)) {
+                setFormErrors({
+                    ...formErrors,
+                    phone_number: 'Invalid phone number (max 13 digits)'
+                })
+            } else {
+                setFormErrors({
+                    ...formErrors,
+                    phone_number: ''
+                })
+            }
+        }
+
+        // set value 
+        setFormData({
+            ...formData,
+            [name]: value
+        })
+    }
     const handleInputChange = (e) => {
         setFormData({
             ...formData,
@@ -160,13 +207,13 @@ function Register() {
                             </div>
                             <h2 className='md:text-2xl text-xl mt-0 font-semibold'>CREATE YOUR ACCOUNT</h2>
 
-                            <div className='md:mt-6 mt-4'>
+                            <div className='md:mt-2 mt-4'>
                                 <form onSubmit={handleFormSubmit}>
                                     <div className="flex flex-wrap md:gap-6 gap-4">
 
                                         <div className="w-full md:w-72">
                                             <label 
-                                                className={errors?.email ? 'block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                className={errors?.email || formErrors.email ? 'block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
                                                 htmlFor="email"
                                             >
                                                 Email
@@ -175,8 +222,9 @@ function Register() {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleInputChange}
+                                                onBlur={handleBlur}
                                                 type="email" 
-                                                className={errors?.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                className={errors?.email || formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
                                                 placeholder='Email'
                                                 required
                                             />
@@ -187,10 +235,13 @@ function Register() {
                                                     ))}
                                                 </div>
                                             )}
+                                            {formErrors.email && (
+                                                <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
+                                            )}
                                         </div>
                                         <div className="w-full md:w-72">
                                             <label 
-                                                className={errors?.phone_number ? 'w-full block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
                                                 htmlFor="phone_number"
                                             >
                                                 Phone Number
@@ -200,7 +251,8 @@ function Register() {
                                                 type="number"
                                                 value={formData.phone_number}
                                                 onChange={handleInputChange}
-                                                className={errors?.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                onBlur={handleBlur}
+                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
                                                 placeholder='Phone Number'
                                                 required
                                                 maxLength='13'
@@ -211,6 +263,9 @@ function Register() {
                                                         <span key={index}>{error}</span>
                                                     ))}
                                                 </div>
+                                            )}
+                                            {formErrors.phone_number && (
+                                                <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
                                             )}
                                         </div>
                                         <div className="w-full md:w-72 ">
