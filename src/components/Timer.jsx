@@ -3,13 +3,7 @@ import { useState, useEffect } from "react"
 
 function Timer({m, year, day}) {
 
-    // const [expiryTime, setExpiryTime] = useState(`${day} ${m} ${year}`)
-    // const [coundownTime, setCoundownTime] = useState({
-    //     countdownDays: '',
-    //     countdownHours: '',
-    //     countdownMinites: '',
-    //     countdownSeconds: '',
-    // })
+
 
     const [expiryTime, setExpiryTime] = useState(new Date(`${year}-${m}-${day}T00:00:00`).getTime());
 
