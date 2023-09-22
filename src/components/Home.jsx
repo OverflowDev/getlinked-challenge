@@ -122,7 +122,7 @@ function Home() {
                         </div>
                     </Bounce>
                     {/* Time  */}
-                    <Timer day={26} m={"08"} year={2023} />
+                    <Timer day={26} m={"09"} year={2023} />
                 </div>
 
                 <div className='md:mt-0 mt-[88px]'>
