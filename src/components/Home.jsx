@@ -1,8 +1,8 @@
 
 import { Link } from 'react-router-dom';
-import {useState, useEffect, useRef} from 'react'
 
 import { Bounce, Slide, Roll, JackInTheBox, Zoom } from 'react-awesome-reveal';
+
 
 
 import Navbar from '../layouts/Navbar';
@@ -43,27 +43,6 @@ import Timer from './Timer';
 
 function Home() {
 
-    const [isVisible, setIsVisible] = useState(false);
-    const fadeInRef = useRef(null);
-
-    useEffect(() => {
-        const handleVisibility = () => {
-          if (fadeInRef.current) {
-            const rect = fadeInRef.current.getBoundingClientRect();
-            setIsVisible(rect.top < window.innerHeight);
-          }
-        };
-    
-        window.addEventListener('scroll', handleVisibility);
-    
-        // Initial check for visibility
-        handleVisibility();
-    
-        return () => {
-          window.removeEventListener('scroll', handleVisibility);
-        };
-      }, []);
-
   return (
     <div className='overflow-hidden'>
         <Navbar />
@@ -76,16 +55,16 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] top-1/2 left-1/2 w-3 animate-pulse' />
             
             <div className="flex md:justify-end justify-center mt-4">
-                <h2 className="lg:text-3xl w-auto md:relative font-semibold italic">
-                    Ignitting a Revolution in HR Innovation
-                    {/* <span className='md:relative'>HR Innovation</span> */}
-
-                    <img 
-                        src={Vector} 
-                        alt="vector" 
-                        className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
-                    />
-                </h2>
+                    <h2 className="lg:text-3xl w-auto md:relative font-semibold italic">
+                        {/* <Typist avgTypingDelay={100}> */}
+                            Ignitting a Revolution in HR Innovation
+                        {/* </Typist> */}
+                    </h2>
+                <img 
+                    src={Vector} 
+                    alt="vector" 
+                    className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
+                />
             </div>  
 
             <div className='md:flex items-center mt-4'>
@@ -122,7 +101,7 @@ function Home() {
                         </div>
                     </Bounce>
                     {/* Time  */}
-                    <Timer day={26} m={"09"} year={2023} />
+                    <Timer day={27} m={"09"} year={2023} />
                 </div>
 
                 <div className='md:mt-0 mt-[88px]'>

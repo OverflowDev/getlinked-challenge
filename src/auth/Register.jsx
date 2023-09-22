@@ -326,70 +326,69 @@ function Register() {
                                                 name="group_size"
                                                 value={formData.group_size}
                                                 onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-main bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
+                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
                                             >
                                                 <option 
                                                     value="1"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     1
                                                 </option>
                                                 <option 
                                                     value="2"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     2
                                                 </option>
                                                 <option 
                                                     value="3"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     3
                                                 </option>
                                                 <option 
                                                     value="4"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     4
                                                 </option>
                                                 <option 
                                                     value="5"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     5
                                                 </option>
                                                 <option 
                                                     value="6"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     6
                                                 </option>
                                                 <option 
                                                     value="7"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     7
                                                 </option>
                                                 <option 
                                                     value="8"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     8
                                                 </option>
                                                 <option 
                                                     value="9"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     9
                                                 </option>
                                                 <option 
                                                     value="10"
-                                                    className="bg-secondary"
+                                                    className="bg-main"
                                                 >
                                                     10
                                                 </option>
                                             </select>
-                                            
                                         </div>
 
                                     </div>
