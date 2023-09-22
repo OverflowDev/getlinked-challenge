@@ -326,7 +326,7 @@ function Register() {
                                                 name="group_size"
                                                 value={formData.group_size}
                                                 onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
+                                                className='w-full border px-3 rounded-md bg-main bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
                                             >
                                                 <option 
                                                     value="1"
@@ -418,27 +418,6 @@ function Register() {
                                     </div>
                                 </form>
 
-                                {/* <div>
-                                    {Object.keys(errors).length > 0 && (
-                                        <div className="bg-red-100 border border-red-500 text-red-700 px-2 py-3 rounded mt-2">
-                                            <ul className="">
-                                                {Object.entries(errors).map(([key, value]) => (
-                                                    <li key={key}>
-                                                        {typeof value === "object" ? (
-                                                            <ul className="list-disc ml-5">
-                                                                {Object.values(value).map((subValue) => (
-                                                                <li key={subValue}>{subValue}</li>
-                                                                ))}
-                                                            </ul>
-                                                        ) : (
-                                                            value
-                                                        )}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div> */}
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import Menu from '../assets/menu.svg'
 import Close from '../assets/close.svg'
@@ -10,6 +10,19 @@ function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false)
   const closeMenu = () => setIsOpen(false)  
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup the effect when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <navbar className='lg:px-24 px-8 flex justify-between items-center py-6 border-b border-gray-500 relative'>
@@ -38,7 +51,9 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu  */}
-      <div className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-5/12 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
+      <div 
+        className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-5/12 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}
+      >
         <Link to='/timeline'>Timeline</Link>
         <Link to='/overview'>Overview</Link>
         <Link to='/faqs'>FAQs</Link>
