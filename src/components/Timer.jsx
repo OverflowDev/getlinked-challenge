@@ -77,7 +77,27 @@ function Timer({m, year, day}) {
                 </h2>
             </div>
         ) : (
-            <h2 className="text-5xl uppercase font-unica-one">Hackathon is over</h2>
+            <div className='font-unica-one mt-10 flex flex-col '>
+                <div className="flex items-center gap-5">
+                    <h2 className='text-5xl'>
+                        <span>00</span>
+                        <span className='text-sm'>D</span>
+                    </h2>
+                    <h2 className='text-5xl'>
+                        <span>00</span>
+                        <span className='text-sm'>H</span>
+                    </h2>
+                    <h2 className='text-5xl'>
+                        <span>00</span>
+                        <span className='text-sm'>M</span>
+                    </h2>
+                    <h2 className='text-5xl'>
+                        <span>00</span>
+                        <span className='text-sm'>S</span>
+                    </h2>
+                </div>
+                <h2 className="md:text-3xl text-2xl mt-2 uppercase text-center">Hackathon is over</h2>
+            </div>
         )}
     </div>
   )

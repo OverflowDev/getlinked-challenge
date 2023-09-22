@@ -52,14 +52,17 @@ function Navbar() {
 
       {/* Mobile Menu  */}
       <div 
-        className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-5/12 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}
+        // className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-5/12 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}
+        className={` lg:hidden  bg-main backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 absolute top-0 w-full h-screen py-24 px-4 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}
       >
-        <Link to='/timeline'>Timeline</Link>
-        <Link to='/overview'>Overview</Link>
-        <Link to='/faqs'>FAQs</Link>
-        <Link to='/contact'>Contact</Link>
-        <div>
-            <Link onClick={closeMenu} to='/register' className="bg-gradient-to-r from-lgrad to-grad py-2 px-8 md:ml-36 rounded-sm">Register</Link>
+        <div className="bg-main absolute top-0 right-0 flex flex-col py-24 px-12 gap-6 w-full h-5/12 ">
+          <Link to='/timeline'>Timeline</Link>
+          <Link to='/overview'>Overview</Link>
+          <Link to='/faqs'>FAQs</Link>
+          <Link to='/contact'>Contact</Link>
+          <div>
+              <Link onClick={closeMenu} to='/register' className="bg-gradient-to-r from-lgrad to-grad py-3 px-10 rounded-sm">Register</Link>
+          </div>
         </div>
       </div>
 
