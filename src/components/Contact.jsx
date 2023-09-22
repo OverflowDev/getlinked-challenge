@@ -68,8 +68,8 @@ function Contact() {
     }
 
   return (
-    <div className='overflow-x-hidden border'>
-        <div className='h-screen'>
+    <div className='overflow-hidden'>
+        {/* <div className='h-screen'> */}
             <Toaster />
             {isDesktop ? (
                 <Navbar /> 
@@ -85,12 +85,12 @@ function Contact() {
 
             <div className='lg:px-24 px-8 flex items-center relative'>
                 <div className="absolute md:top-36 md:left-36 top-24 right-24 w-48 h-48 bg-primary rounded-full blur-3xl opacity-20 "></div>
-                <div className="absolute -bottom-24 -right-4 md:w-96 w-48 md:h-96 h-48 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                <div className="absolute md:-bottom-24 md:-right-4 md:w-96 w-48 md:h-96 h-48 bg-primary rounded-full blur-3xl opacity-20 "></div>
                 <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-                <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 py-4 w-full h-full'>
+                <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 py-2 w-full h-full'>
                     
                     <div className='hidden md:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
                         <div className='md:flex md:justify-start justify-center hidden'>
@@ -121,7 +121,7 @@ function Contact() {
                         </div>
                     </div>
 
-                    <div className='lg:w-6/12 '>
+                    <div className='lg:w-6/12'>
                         <div className='md:p-12 p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                             <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                             <h3 className='block md:hidden md:mb-12 mb-6'>Email us below to any question related to our event</h3>
@@ -187,7 +187,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-        </div>
+        {/* </div> */}
     </div>
   )
 }
