@@ -38,7 +38,7 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu  */}
-      <div className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-96 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
+      <div className={` lg:hidden flex flex-col bg-main absolute top-0 w-full h-5/12 py-24 px-12 gap-6 delay-100 duration-500 z-10 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
         <Link to='/timeline'>Timeline</Link>
         <Link to='/overview'>Overview</Link>
         <Link to='/faqs'>FAQs</Link>

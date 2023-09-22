@@ -38,6 +38,7 @@ import Paybox from '../assets/logo/Paybox.png'
 import Whishper from '../assets/logo/whisper.png'
 import Winwise from '../assets/logo/winwise.png'
 import Vizual from '../assets/logo/vizual.png'
+import Timer from './Timer';
 
 
 function Home() {
@@ -69,7 +70,7 @@ function Home() {
         {/* Home  */}
         <section className="relative border-b border-gray-700 md:px-24 px-8">
             {/* Flare  */}
-            <div className="absolute md:-top-12 md:left-36 md:w-96 md:h-96 bg-primary rounded-full blur-3xl opacity-30 "></div>
+            <div className="absolute md:-top-12 top-1 md:left-36 md:w-96 md:h-96 w-24 h-24 bg-primary rounded-full blur-3xl opacity-30 "></div>
             <img src={Star} alt="star" className='absolute md:top-24 md:left-36 top-12 left-24 w-3 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:top-24 md:left-[50%] top-12 right-10 w-2 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] top-1/2 left-1/2 w-3 animate-pulse' />
@@ -121,25 +122,15 @@ function Home() {
                         </div>
                     </Bounce>
                     {/* Time  */}
-                    <div className='font-unica-one mt-10 flex lg:justify-start justify-center items-center gap-5'>
-                        <h2 className='text-5xl'>
-                            00<span className='text-sm'>H</span>
-                        </h2>
-                        <h2 className='text-5xl'>
-                            00<span className='text-sm'>M</span>
-                        </h2>
-                        <h2 className='text-5xl'>
-                            00<span className='text-sm'>S</span>
-                        </h2>
-                    </div>
+                    <Timer day={26} m={10} year={2023} />
                 </div>
 
                 <div className='md:mt-0 mt-[88px]'>
                     {/* Flare  */}
-                    <div className="absolute top-24 right-36 md:w-96 w-64 md:h-96 h-64 bg-primary rounded-full blur-3xl opacity-20 "></div>
+                    <div className="absolute md:top-24 top-8 -z-1 md:right-36 right-64 md:w-96 w-64 md:h-96 h-64 bg-primary rounded-full blur-3xl opacity-20 "></div>
                     <img src={Planet} alt="planet" className='absolute md:w-5/12 w-80' />
                     <img src={Man} alt="man" className='md:w-full' />
-                    <img src={Metrix} alt="man" className='absolute top-24 md:-right-0 w-96 h-96' />
+                    <img src={Metrix} alt="man" className='absolute -z-50 top-24 md:-right-0 w-96 h-96' />
                 </div>
             </div>
 
