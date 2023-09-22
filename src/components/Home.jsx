@@ -603,14 +603,14 @@ function Home() {
 
                 <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-0 mt-16 w-full font-montserrat'>
                     
-                    <Slide delay={200} direction='left'>
+                    {/* <Slide delay={200} direction='down'> */}
                         <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
                             <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
                             <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>2nd</h2>
                             <h2 className='text-sm'>Runner</h2>
                             <h2 className='md:text-2xl font-bold text-secondary'>N300,000</h2>
                         </div>
-                    </Slide>
+                    {/* </Slide> */}
 
                     <Slide delay={100} direction='down'>
                         <div className='w-32 h-60 rounded-md border border-primary bg-primary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
@@ -621,14 +621,14 @@ function Home() {
                         </div>
                     </Slide>
 
-                    <Slide delay={300} direction='right'>
+                    {/* <Slide delay={300} direction='top'> */}
                         <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
                             <img src={Bronze} alt="second" className='absolute md:-top-16 -top-8' />
                             <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>3rd</h2>
                             <h2 className='text-sm'>Runner</h2>
                             <h2 className='md:text-2xl font-bold text-secondary'>N200,000</h2>
                         </div>
-                    </Slide>
+                    {/* </Slide> */}
                     
                 </div>
             </div>
