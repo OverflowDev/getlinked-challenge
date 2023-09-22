@@ -19,16 +19,17 @@ function Register() {
 
     const [categories, setCategories] = useState([])
 
-    // const [errors, setErrors] = useState([]);
+    const [errors, setErrors] = useState([]);
+
     const [loading, setLoading] = useState(false)
     const [successModal, setSuccessModal] = useState(false)
 
     const handleModalClose = () => setSuccessModal(false)
 
-
+    // Set desktop 
     useEffect(() => {
         function handleResize() {
-        setIsDesktop(window.innerWidth >= 768); // Adjust the breakpoint as needed
+            setIsDesktop(window.innerWidth >= 768); // Adjust the breakpoint as needed
         }
 
         window.addEventListener("resize", handleResize);
@@ -37,6 +38,7 @@ function Register() {
         };
     }, []);
 
+    // Fetching categories 
     useEffect(() => {
       const getCategories = async () => {
         try {
@@ -101,20 +103,19 @@ function Register() {
                 })
 
                 toast.success('Form submitted')
-                // setErrors([]);
+                setErrors([]);
             } else {
                 console.log('something is not right')
             }
         } catch (error) {
             toast.error('Something is not right!!!')
             if (error.response && error.response.data) {
-                // setErrors(error.response.data);
-                console.log(error.response.data)
+                setErrors(error.response.data)
+                // console.log(error.response.data)
             } else {
                 console.error(error);
             }
         }
-
 
     }
 
@@ -164,29 +165,53 @@ function Register() {
                                     <div className="flex flex-wrap md:gap-6 gap-4">
 
                                         <div className="w-full md:w-72">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="email">Email</label>
+                                            <label 
+                                                className={errors?.email ? 'block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                htmlFor="email"
+                                            >
+                                                Email
+                                            </label>
                                             <input 
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleInputChange}
                                                 type="email" 
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                                className={errors?.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
                                                 placeholder='Email'
                                                 required
                                             />
+                                            {errors.email && (
+                                                <div className="mt-1 text-sm text-red-500">
+                                                    {errors?.email.map((error, index) => (
+                                                        <span key={index}>{error}</span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="w-full md:w-72">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="phone_number">Phone Number</label>
+                                            <label 
+                                                className={errors?.phone_number ? 'w-full block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                htmlFor="phone_number"
+                                            >
+                                                Phone Number
+                                            </label>
                                             <input 
                                                 name="phone_number"
                                                 type="number"
                                                 value={formData.phone_number}
                                                 onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none appearance-none'
+                                                className={errors?.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
                                                 placeholder='Phone Number'
                                                 required
                                                 maxLength='13'
                                             />
+                                            {errors.phone_number && (
+                                                <div className="mt-1 text-sm text-red-500">
+                                                    {errors?.phone_number.map((error, index) => (
+                                                        <span key={index}>{error}</span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="w-full md:w-72 ">
                                             <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team Name</label>
@@ -338,13 +363,27 @@ function Register() {
                                     </div>
                                 </form>
 
-                                    {/* {errors && (
-                                        <ul className="text-white">
-                                            {errors.map((error, index) => (
-                                                <li key={index}>{error}</li>
-                                            ))}
-                                        </ul>
-                                    )} */}
+                                {/* <div>
+                                    {Object.keys(errors).length > 0 && (
+                                        <div className="bg-red-100 border border-red-500 text-red-700 px-2 py-3 rounded mt-2">
+                                            <ul className="">
+                                                {Object.entries(errors).map(([key, value]) => (
+                                                    <li key={key}>
+                                                        {typeof value === "object" ? (
+                                                            <ul className="list-disc ml-5">
+                                                                {Object.values(value).map((subValue) => (
+                                                                <li key={subValue}>{subValue}</li>
+                                                                ))}
+                                                            </ul>
+                                                        ) : (
+                                                            value
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div> */}
                             </div>
                         </div>
                     </div>

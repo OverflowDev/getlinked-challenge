@@ -77,7 +77,7 @@ function Timer({m, year, day}) {
                 </h2>
             </div>
         ) : (
-            <p>NO</p>
+            <h2 className="text-5xl uppercase font-unica-one">Hackathon is over</h2>
         )}
     </div>
   )
