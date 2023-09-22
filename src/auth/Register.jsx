@@ -292,7 +292,7 @@ function Register() {
                                                 required
                                             />
                                         </div>
-                                        <div className="w-44 md:w-48 lg:w-72 ">
+                                        <div className="w-7/12 md:w-7/12 lg:w-72 ">
                                             <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
                                             <select 
                                                 name="category"
@@ -320,7 +320,7 @@ function Register() {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="w-20 md:w-72 ">
+                                        <div className="w-4/12 md:w-72 ">
                                             <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
                                             <select 
                                                 name="group_size"
