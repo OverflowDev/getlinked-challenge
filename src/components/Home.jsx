@@ -635,13 +635,13 @@ function Home() {
                 </Slide>
             </div>
 
-            <div className='flex justify-center items-center rounded-md border border-secondary w-full md:h-96 mt-12 relative'>
-                <div className="grid grid-cols-3 py-12">
+            <div className='flex justify-center items-center rounded-md border border-secondary w-full md:h-full mt-12 relative'>
+                <div className="grid grid-cols-3 py-28">
                     <>
                     {/* 1 */}
                     <div className="relative">
                         <div className="flex items-center justify-center px-8 h-full">
-                            <img src={Liberty} alt="Liberty" className="w-48 h-auto" />
+                            <img src={Liberty} alt="Liberty" className="w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
@@ -652,7 +652,7 @@ function Home() {
                     {/* 2 */}
                     <div className="relative ">
                         <div className="flex justify-center items-center px-8 h-full">
-                            <img src={LibertyPay} alt="Liberty" className="md:w-48 h-auto" />
+                            <img src={LibertyPay} alt="Liberty" className="md:w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
@@ -663,7 +663,7 @@ function Home() {
                     {/* 3 */}
                     <div className="relative ">
                         <div className="flex justify-center items-center px-8 h-full">
-                            <img src={Winwise} alt="Liberty" className="w-48 h-auto" />
+                            <img src={Winwise} alt="Liberty" className="w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         {/* <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div> */}
@@ -674,7 +674,7 @@ function Home() {
                     {/* 4 */}
                     <div className="relative mt-8">
                         <div className="flex items-center justify-center px-8 h-full">
-                            <img src={Whishper} alt="Liberty" className="w-48 h-auto" />
+                            <img src={Whishper} alt="Liberty" className="w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
@@ -685,7 +685,7 @@ function Home() {
                     {/* 5 */}
                     <div className="relative mt-8">
                         <div className="flex justify-center items-center px-8 h-full">
-                            <img src={Paybox} alt="Liberty" className="w-48 h-auto" />
+                            <img src={Paybox} alt="Liberty" className="w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div>
@@ -696,7 +696,7 @@ function Home() {
                     {/* 6 */}
                     <div className="relative mt-8">
                         <div className="flex justify-center items-center px-8 h-full">
-                            <img src={Vizual} alt="Liberty" className="w-48 h-auto" />
+                            <img src={Vizual} alt="Liberty" className="w-36 h-auto" />
                         </div>
                         {/* <!-- Right Border --> */}
                         {/* <div className="absolute inset-y-0 right-0 w-2 border-r-2 border-secondary"></div> */}
