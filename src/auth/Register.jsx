@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 
-import axios from "axios";
+import axiosPrivate from "../api/axios";
 
 import toast, { Toaster } from 'react-hot-toast'
+
 
 // import ErrorAlert from "../lib/ErrorAlert";
 
@@ -49,7 +50,7 @@ function Register() {
     useEffect(() => {
       const getCategories = async () => {
         try {
-            const res =await axios.get('https://backend.getlinked.ai/hackathon/categories-list')
+            const res = await axiosPrivate.get('/hackathon/categories-list')
             setCategories(res?.data)
         } catch (error) {
             console.log(error)
@@ -131,7 +132,7 @@ function Register() {
         e.preventDefault()
 
         try {
-            const response = await axios.post('https://backend.getlinked.ai/hackathon/registration', formData)
+            const response = await axiosPrivate.post('/hackathon/registration', formData)
             setLoading(true)
             
             if(response && response?.status === 201) {
@@ -158,7 +159,7 @@ function Register() {
             toast.error('Something is not right!!!')
             if (error.response && error.response.data) {
                 setErrors(error.response.data)
-                console.log(error)
+                // console.log(error)
             } else {
                 console.error(error);
             }
