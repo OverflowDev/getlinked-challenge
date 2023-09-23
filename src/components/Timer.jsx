@@ -56,7 +56,7 @@ function Timer({m, year, day}) {
     }, [expiryTime])
     
   return (
-    <div className="flex lg:justify-start justify-center items-center">
+    <div className="flex lg:justify-start justify-center items-center mt-10">
         {countdownTime.countdownDays > 0 || countdownTime.countdownHours > 0 || countdownTime.countdownMinutes > 0 || countdownTime.countdownSeconds > 0 || expiryTime !== false ? (
             <div className='font-unica-one mt-10 flex gap-5'>
                 <h2 className='text-5xl'>

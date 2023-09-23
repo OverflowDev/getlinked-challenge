@@ -215,7 +215,7 @@ function Register() {
                                 <form onSubmit={handleFormSubmit}>
                                     <div className="flex flex-wrap md:gap-6 gap-4">
                                         
-                                        <Fade duration={2000} >
+                                        {/* <Fade duration={2000} > */}
                                             <div className="w-full md:w-72 ">
                                                 <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team's name</label>
                                                 <input 
@@ -395,7 +395,7 @@ function Register() {
                                                     </option>
                                                 </select>
                                             </div>
-                                        </Fade>
+                                        {/* </Fade> */}
 
                                     </div>
                                     
