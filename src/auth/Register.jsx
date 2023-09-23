@@ -402,18 +402,18 @@ function Register() {
                                     <Fade duration={2000} >
                                         <h2 className="italic text-secondary md:text-sm text-[10px] mt-4">Please revieew your registration details before submitting</h2>
                                     </Fade>
-                                    <label className="text-sm">
                                         <Fade duration={2000} >
-                                            <input
-                                                name="privacy_poclicy_accepted"
-                                                type="checkbox"
-                                                checked={formData.privacy_poclicy_accepted}
-                                                onChange={handleCheckboxChange}
-                                                required
-                                            />
-                                            I agreed with the event terms and conditions and privacy policy
+                                            <label className="text-sm">
+                                                <input
+                                                    name="privacy_poclicy_accepted"
+                                                    type="checkbox"
+                                                    checked={formData.privacy_poclicy_accepted}
+                                                    onChange={handleCheckboxChange}
+                                                    required
+                                                />
+                                                I agreed with the event terms and conditions and privacy policy
+                                            </label>
                                         </Fade>
-                                    </label>
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-8'>
                                         <Fade duration={2000} >
