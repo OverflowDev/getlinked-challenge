@@ -192,7 +192,8 @@ function Contact() {
                                             value={formData.email}
                                             onChange={handleInputChange}
                                             onBlur={handleBlur}
-                                            className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                            className={ formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-red-500 placeholder:text-red-500 focus:text-red-500 focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                            // className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                             placeholder='Email'
                                             required
                                         />
@@ -207,7 +208,8 @@ function Contact() {
                                             value={formData.phone_number}
                                             onChange={handleInputChange}
                                             onBlur={handleBlur}
-                                            className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                            className={formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-red-500 placeholder:text-red-500 focus:text-red-500 focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                            // className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                             placeholder='Phone Number'
                                             required
                                         />
