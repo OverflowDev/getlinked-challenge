@@ -137,7 +137,7 @@ function Home() {
                         </Bounce>
                     </div>
 
-                <div className='flex flex-col max-w-xl md:mt-0 mt-20' id='fade-in-section'>
+                <div className='flex flex-col md:max-w-xl md:mt-0 mt-20' id='fade-in-section'>
                     <Slide
                         direction='down'
                     >
@@ -177,13 +177,13 @@ function Home() {
                 </div>
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
-                    <div className='flex md:justify-start justify-center'>
-                        <Slide
-                            direction='down'
-                        >
-                            <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Rules and <span className='text-secondary'>Guidelines</span></h2>
-                        </Slide>
-                    </div>
+                    <Slide
+                        direction='down'
+                    >
+                        <div className='flex md:justify-start justify-center'>
+                                <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Rules and <span className='text-secondary'>Guidelines</span></h2>
+                        </div>
+                    </Slide>
                     <Slide direction='left'>
                         <p className='tracking-wide leading-1 mt-6'>
                             Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform  your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!
@@ -201,18 +201,18 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
             <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
-                <div className='md:w-6/12'>
+                <div className='lg:w-6/12 md:5/12 '>
                     <Slide direction='left' duration={1000} delay={1000}>
                         <img src={Criteria} alt="idea" className='' />
                     </Slide>
                 </div>
 
                 <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
-                    <div className='flex md:justify-start justify-center'>
-                        <Slide direction='down' delay={100}>
+                    <Slide direction='down' delay={100}>
+                        <div className='flex md:justify-start justify-center'>
                             <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Judging Criteria <span className='text-secondary'>Key attributes</span></h2>
-                        </Slide>
-                    </div>
+                        </div>
+                    </Slide>
                     <div className='flex flex-col gap-4 mt-4 font-montserrat'>
                         <Slide direction='right' delay={100}>
                             <h2 className='text-md leading-1 text-key font-medium'>Innovation and Creativity: <span className='text-white'>Evaluate the uniqueness and creativity of the solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features.</span></h2>
@@ -248,11 +248,11 @@ function Home() {
             <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
 
                 <div className='flex flex-col max-w-xl md:mt-24 mt-12'>
-                    <div className='flex md:justify-start justify-center'>
                         <Slide direction='down'>
-                            <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
+                            <div className='flex md:justify-start justify-center'>
+                                <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
+                            </div>
                         </Slide>
-                    </div>
                     <Slide duration={400} direction='left'>
                         <p className='mt-4 max-w-md'>We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
                     </Slide>
@@ -559,30 +559,29 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
 
-            <div className='flex md:justify-end justify-center mt-12'>
-                <Slide direction='right' duration={1000}>
-                    <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-bold md:text-5xl text-3xl md:text-left text-center'>Prizes and <span className='text-secondary'>Rewards</span></h2>
-                </Slide>
-            </div>
+            <Slide direction='right' duration={1000}>
+                <div className='flex md:justify-center justify-center mt-12'>
+                    <h2 className='md:max-w-md md:w-full w-3/4 font-clash-display font-bold md:text-5xl text-3xl md:text-left text-center'>Prizes and <span className='text-secondary'>Rewards</span></h2>
+                </div>
+            </Slide>
 
             <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
 
-                <div className='lg:w-10/12'>
+
+                <div className='lg:w-10/12 md:w-8/12'>
                     <Bounce delay={100} duration={300}>
                         <img src={Prize} alt="idea" className='lg:w-full' />
                     </Bounce>
                 </div>
 
-                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-0 mt-16 w-full font-montserrat'>
+                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-6 mt-16 w-full font-montserrat'>
                     
-                    {/* <Slide delay={200} direction='down'> */}
-                        <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
-                            <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
-                            <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>2nd</h2>
-                            <h2 className='text-sm'>Runner</h2>
-                            <h2 className='md:text-2xl font-bold text-secondary'>N300,000</h2>
-                        </div>
-                    {/* </Slide> */}
+                    <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
+                        <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
+                        <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>2nd</h2>
+                        <h2 className='text-sm'>Runner</h2>
+                        <h2 className='md:text-2xl font-bold text-secondary'>N300,000</h2>
+                    </div>
 
                     <Slide delay={100} direction='down'>
                         <div className='w-32 h-60 rounded-md border border-primary bg-primary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
@@ -593,16 +592,15 @@ function Home() {
                         </div>
                     </Slide>
 
-                    {/* <Slide delay={300} direction='top'> */}
-                        <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
-                            <img src={Bronze} alt="second" className='absolute md:-top-16 -top-8' />
-                            <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>3rd</h2>
-                            <h2 className='text-sm'>Runner</h2>
-                            <h2 className='md:text-2xl font-bold text-secondary'>N200,000</h2>
-                        </div>
-                    {/* </Slide> */}
+                    <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
+                        <img src={Bronze} alt="second" className='absolute md:-top-16 -top-8' />
+                        <h2 className='font-bold md:text-4xl text-center tracking-wide mt-14'>3rd</h2>
+                        <h2 className='text-sm'>Runner</h2>
+                        <h2 className='md:text-2xl font-bold text-secondary'>N200,000</h2>
+                    </div>
                     
                 </div>
+                
             </div>
         </section>
 
@@ -713,16 +711,16 @@ function Home() {
 
                 <div className=' lg:w-6/12'>
                     <div className='flex flex-col py-4 mt-4'>
-                        <div className='flex lg:justify-start justify-center mt-12'>
                             <Slide>
-                                <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                                <div className='flex lg:justify-start justify-center mt-12'>
+                                    <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                                </div>
                             </Slide>
-                        </div>
                         <Slide delay={100}>
                             <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
                         </Slide>
                         <Slide delay={250}>
-                            <p className='text-center md:text-start max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
+                            <p className='md:text-start md:max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
                         </Slide>
                     </div>
 
@@ -770,7 +768,7 @@ function Home() {
                 {/* image */}
                 <div className='relative md:mt-0 mt-12 lg:py-0 py-8'>
                     <img src={Shield} alt="shield" className='lg:w-10/12 ' />
-                    <div className='lg:w-10/12 md:w-8/12 w-64 absolute lg:bottom-2 lg:left-0  bottom-0 top-36 left-8'>
+                    <div className='lg:w-10/12 md:w-7/12 w-64 absolute lg:bottom-2 lg:left-0  bottom-0 top-36 left-8'>
                         <Zoom direction='right' delay={500}>
                             <img src={ShieldMan} alt="shield" className='' />
                         </Zoom>

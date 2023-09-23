@@ -37,7 +37,7 @@ function Footer() {
                     </div>
 
                     <div className="flex items-center mt-2 space-x-2">
-                        <h2 className="text-secondary text-sm font-bold">Follow us</h2>
+                        <h2 className="text-secondary text-xs font-bold">Follow us</h2>
                         <ion-icon name="logo-instagram"></ion-icon>
                         <ion-icon name="logo-twitter"></ion-icon>
                         <ion-icon name="logo-facebook"></ion-icon>
@@ -46,7 +46,7 @@ function Footer() {
                 </div>
                 {/* COntact  */}
                 <div className="md:mt-0 mt-12">
-                    <h2 className="font-clash-display text-2xl font-extrabold text-secondary">Useful Links</h2>
+                    <h2 className="font-clash-display text-2xl font-extrabold text-secondary">Contact us</h2>
                     
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center space-x-3">
