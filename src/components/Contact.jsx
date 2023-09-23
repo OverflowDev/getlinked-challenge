@@ -126,7 +126,7 @@ function Contact() {
     }
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden h-screen'>
         {/* <div className='h-screen'> */}
             <Toaster />
             {isDesktop ? (
@@ -148,11 +148,11 @@ function Contact() {
                 <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] top-[47%] right-[5%] w-4 animate-pulse' />
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
-                <div className='lg:flex lg:justify-between lg:items-center items-start lg:py-12 py-2 w-full h-full'>
+                <div className='lg:flex lg:justify-between lg:items-center lg:py-12 py-2 w-full h-full lg:mt-0 '>
                     
-                    <div className='hidden md:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
+                    <div className='hidden lg:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
                         <div className='md:flex md:justify-start justify-center hidden'>
-                            <h2 className='md:max-w-sm md:w-full w-3/4 font-semibold md:text-5xl text-3xl md:text-left text-center text-secondary font-clash-display'>Get in Toch</h2>
+                            <h2 className='md:max-w-sm md:w-full w-3/4 font-semibold md:text-5xl text-3xl md:text-left text-center text-secondary font-clash-display'>Get in Touch</h2>
                         </div>
                         <h2 className=' w-32 font-semibold font-montserrat'>
                             Contact Information
@@ -179,8 +179,30 @@ function Contact() {
                         </div>
                     </div>
 
+                    <div className='hidden lg:hidden md:flex flex-wrap mt-12 mb-12'>
+                        <h2 className='w-full font-semibold text-5xl text-center text-secondary font-clash-display'>Get in Touch</h2>
+                        <div className="flex items-center gap-12 justify-center w-full mt-2">
+                            <div>
+                                <h2 className='text-grad font-semibold font-montserrat'>
+                                    Contact Information
+                                </h2>
+                                <h2 className=' font-semibold font-montserrat'>
+                                    27,Alara Street
+                                    Yaba 100012
+                                    Lagos State
+                                </h2>
+                            </div>
+                            <h2 className=' font-semibold font-montserrat'>
+                                Call Us : 07067981819
+                            </h2>
+                            <h2 className=' max-w-xs font-semibold font-montserrat'>
+                                we are open from Monday-Friday 08:00am - 05:00pm
+                            </h2>
+                        </div>
+                    </div>
+
                     <div className='lg:w-6/12'>
-                        <div className='md:p-12 p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
+                        <div className='md:p-12 p-4 lg:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                             <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                             <h3 className='block md:hidden md:mb-12 mb-6'>Email us below to any question related to our event</h3>
                             <div className='flex-col md:mt-6'>
@@ -291,6 +313,7 @@ function Contact() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         {/* </div> */}
