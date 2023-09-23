@@ -170,7 +170,7 @@ function Home() {
 
             <div className='md:flex md:justify-between justify-center items-center py-12 mt-4'>
                 
-                <div className='md:w-6/12 order-last'>
+                <div className='lg:w-6/12 md:w-5/12 order-last'>
                     <JackInTheBox delay={500} duration={700}>
                         <img src={Rules} alt="idea"  />
                     </JackInTheBox>
@@ -201,7 +201,7 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
             <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
-                <div className='lg:w-6/12 md:5/12 '>
+                <div className='lg:w-6/12 md:w-5/12 '>
                     <Slide direction='left' duration={1000} delay={1000}>
                         <img src={Criteria} alt="idea" className='' />
                     </Slide>
@@ -245,14 +245,14 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
 
-            <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
 
-                <div className='flex flex-col max-w-xl md:mt-24 mt-12'>
-                        <Slide direction='down'>
-                            <div className='flex md:justify-start justify-center'>
-                                <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
-                            </div>
-                        </Slide>
+                <div className='flex flex-col lg:justify-between justify-center max-w-xl md:mt-24 mt-12'>
+                    <Slide direction='down'>
+                        <div className='flex md:justify-start justify-center'>
+                            <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Frequent Ask <span className='text-secondary'>Question</span></h2>
+                        </div>
+                    </Slide>
                     <Slide duration={400} direction='left'>
                         <p className='mt-4 max-w-md'>We got answers to the questions that you might want to ask about getlinked Hackathon 1.0</p>
                     </Slide>
@@ -568,7 +568,7 @@ function Home() {
             <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
 
 
-                <div className='lg:w-10/12 md:w-8/12'>
+                <div className='lg:w-10/12 md:w-5/12'>
                     <Bounce delay={100} duration={300}>
                         <img src={Prize} alt="idea" className='lg:w-full' />
                     </Bounce>
@@ -696,7 +696,7 @@ function Home() {
         </section>
 
         {/* privacy  */}
-        <section className='border-b border-gray-700 md:px-24 px-8 relative py-12'>
+        <section className='border-b border-gray-700 md:px-24 px-8 relative md:py-12'>
 
             <img src={StarPu} alt="star" className='absolute md:bottom-1/2 md:left-12 w-4 animate-pulse' />
             <div className="absolute md:-bottom-24 bottom-1/2 md:-left-24 -left-24 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
@@ -707,15 +707,14 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute bottom-[32%] right-[45%]  w-3 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute top-[20%] right-[60%] w-4 animate-pulse' />
 
-            <div className="lg:flex">
-
-                <div className=' lg:w-6/12'>
-                    <div className='flex flex-col py-4 mt-4'>
-                            <Slide>
-                                <div className='flex lg:justify-start justify-center mt-12'>
-                                    <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
-                                </div>
-                            </Slide>
+            <div className="md:flex md:justify-between justify-center py-10 mt-2">
+                <div className='lg:w-7/12'>
+                    <div className='flex flex-col'>
+                        <Slide>
+                            <div className='flex lg:justify-start justify-center md:mt-0 '>
+                                <h2 className='md:max-w-sm md:w-64 w-3/4 font-clash-display font-bold text-3xl md:text-start text-center'>Privacy Policy and <span className='text-secondary'>Terms</span></h2>
+                            </div>
+                        </Slide>
                         <Slide delay={100}>
                             <h2 className='mt-4 font-montserrat text-xs'>Last updated on September 12, 2023</h2>
                         </Slide>
@@ -723,7 +722,7 @@ function Home() {
                             <p className='md:text-start md:max-w-md text-sm mt-4'>Below are our privacy & policy, which outline a lot of goodies. It's our aim to always take of our participant</p>
                         </Slide>
                     </div>
-
+                    
                     <div className='mt-4 md:w-9/12 md:p-12 p-8 rounded border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 shadow-lg'>
                         <p className='text-sm'>
                             At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy
@@ -766,7 +765,7 @@ function Home() {
                     </div>
                 </div>
                 {/* image */}
-                <div className='relative md:mt-0 mt-12 lg:py-0 py-8'>
+                <div className='relative md:mt-0 mt-12 lg:py-0 py-6'>
                     <img src={Shield} alt="shield" className='lg:w-10/12 ' />
                     <div className='lg:w-10/12 md:w-7/12 w-64 absolute lg:bottom-2 lg:left-0  bottom-0 top-36 left-8'>
                         <Zoom direction='right' delay={500}>
