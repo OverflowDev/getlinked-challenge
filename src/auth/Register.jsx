@@ -211,10 +211,22 @@ function Register() {
                             <div className='md:mt-2 mt-4'>
                                 <form onSubmit={handleFormSubmit}>
                                     <div className="flex flex-wrap md:gap-6 gap-4">
-
+                                        
+                                        <div className="w-full md:w-72 ">
+                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team's name</label>
+                                            <input 
+                                                name="team_name"
+                                                value={formData.team_name}
+                                                onChange={handleInputChange}
+                                                type="text" 
+                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
+                                                placeholder='Enter the name of your group'
+                                                required
+                                            />
+                                        </div>
                                         <div className="w-full md:w-72">
                                             <label 
-                                                className={errors?.email || formErrors.email ? 'block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                className={errors?.email || formErrors.email ? 'block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
                                                 htmlFor="email"
                                             >
                                                 Email
@@ -225,8 +237,8 @@ function Register() {
                                                 onChange={handleInputChange}
                                                 onBlur={handleBlur}
                                                 type="email" 
-                                                className={errors?.email || formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                                placeholder='Email'
+                                                className={errors?.email || formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
+                                                placeholder='Enter your email address'
                                                 required
                                             />
                                             {errors.email && (
@@ -242,7 +254,7 @@ function Register() {
                                         </div>
                                         <div className="w-full md:w-72">
                                             <label 
-                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full block uppercase tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block uppercase tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
                                                 htmlFor="phone_number"
                                             >
                                                 Phone Number
@@ -253,8 +265,8 @@ function Register() {
                                                 value={formData.phone_number}
                                                 onChange={handleInputChange}
                                                 onBlur={handleBlur}
-                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                                placeholder='Phone Number'
+                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
+                                                placeholder='Enter your phone number'
                                                 required
                                                 maxLength='13'
                                             />
@@ -270,31 +282,19 @@ function Register() {
                                             )}
                                         </div>
                                         <div className="w-full md:w-72 ">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team Name</label>
-                                            <input 
-                                                name="team_name"
-                                                value={formData.team_name}
-                                                onChange={handleInputChange}
-                                                type="text" 
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                                placeholder='Team Name'
-                                                required
-                                            />
-                                        </div>
-                                        <div className="w-full md:w-72 ">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="project_topic">Project Topic</label>
+                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="project_topic">Project Topic</label>
                                             <input 
                                                 type="text" 
                                                 name="project_topic"
                                                 value={formData.project_topic}
                                                 onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                                placeholder='Project Topic'
+                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
+                                                placeholder='What is your project topic?'
                                                 required
                                             />
                                         </div>
                                         <div className="w-7/12 md:w-7/12 lg:w-72 ">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
+                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
                                             <select 
                                                 name="category"
                                                 value={formData.category}
@@ -322,7 +322,7 @@ function Register() {
                                             </select>
                                         </div>
                                         <div className="w-4/12 md:w-72 ">
-                                            <label className="block uppercase tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
+                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
                                             <select 
                                                 name="group_size"
                                                 value={formData.group_size}

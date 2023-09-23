@@ -185,7 +185,7 @@ function Contact() {
                                         placeholder='First Name'
                                         required
                                     />
-                                    <div>
+                                    <div className='relative'>
                                         <input 
                                             type="email"
                                             name='email'
