@@ -203,7 +203,7 @@ function Register() {
                     </div>
 
                     <div className='lg:w-7/12 md:h-max h-max md:mt-6 mt-0'>
-                        <div className=' md:w-full md:p-12 p-2 h-full md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
+                        <div className=' md:w-full md:p-12 p-2 h-full md:rounded-md md:shadow-md md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                             <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-3xl text-xl font-bold '>Register</h2>
                             <div className="flex items-center md:mt-5 mt-6">
                                 <h2 className="text-sm">Be part of this movement</h2>
