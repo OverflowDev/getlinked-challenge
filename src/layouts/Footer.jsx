@@ -11,7 +11,7 @@ function Footer() {
             <img src={Star} alt="star" className='absolute md:bottom-1/2 md:left-10 bottom-1/2 left-1/2 w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-12 md:right-[15%] bottom-36 right-[15%] w-3 animate-pulse' />
 
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             <div className="flex flex-col justify-between">
                 <div>
                     <h2 className="font-clash-display text-2xl font-extrabold text-secondary"><span className="text-white">get</span>linked</h2>
@@ -37,7 +37,7 @@ function Footer() {
                     </div>
 
                     <div className="flex items-center mt-2 space-x-2">
-                        <h2 className="text-secondary text-xs font-bold">Follow us</h2>
+                        <h2 className="text-secondary text-sm font-bold">Follow us</h2>
                         <ion-icon name="logo-instagram"></ion-icon>
                         <ion-icon name="logo-twitter"></ion-icon>
                         <ion-icon name="logo-facebook"></ion-icon>
