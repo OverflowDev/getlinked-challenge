@@ -76,7 +76,7 @@ function Home() {
                         <img 
                             src={Vector} 
                             alt="vector" 
-                            className='absolute lg:w-40 w-24 left-64 lg:left-96 transform'
+                            className='absolute lg:w-40 w-24 md:left-48 left-64 lg:left-96 transform'
                         />
                     </h2>
             </div>  
@@ -89,8 +89,8 @@ function Home() {
                         cascade
                         duration={2000}
                     >
-                        <h2 className='lg:text-7xl md:text-2xl text-5xl md:text-left text-center font-extrabold font-clash-display relative'>
-                                <span className='absolute lg:-top-14 md:right-48 -top-6 right-10'><img src={Creative} alt="creative" className='lg:w-full w-6' /></span>
+                        <h2 className='lg:text-7xl md:text-2xl text-4xl md:text-left text-center font-extrabold font-clash-display relative'>
+                                <span className='absolute lg:-top-14 lg:right-48 md:right-24 -top-6 right-16'><img src={Creative} alt="creative" className='lg:w-full w-6' /></span>
                                 getlinked Tech Hackathon <span className='text-secondary'>1.0</span> 
                                 <span className='flex absolute lg:bottom-3 bottom-3 lg:right-16 -right-5'><img src={Chain} alt="Chain" className='lg:w-14 w-6' /> <img src={Flare} alt="Flare" className='w-5 lg:w-12' /> </span>
                         </h2>
