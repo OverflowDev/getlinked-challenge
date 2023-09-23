@@ -537,7 +537,7 @@ function Home() {
                         {/* right */}
                         <div className=" col-start-6 col-end-10 p-4 my-4 mr-auto shadow-md">
                             <Slide direction='right'>
-                                <h3 className="font-semibold md:text-lg mb-1 text-secondary">Demo DAy</h3>
+                                <h3 className="font-semibold md:text-lg mb-1 text-secondary">Demo Day</h3>
                                 <p className="leading-tight text-justify text-sm font-montserrat">
                                     Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced this day
                                 </p>

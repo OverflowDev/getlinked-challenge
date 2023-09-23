@@ -4,13 +4,18 @@ import axios from 'axios'
 
 import toast, { Toaster } from 'react-hot-toast'
 
+import ContactModal from '../modal/ContactModal'
+
 import Star from '../assets/star.svg'
 import StarPu from '../assets/starpu.svg'
 import Navbar from '../layouts/Navbar'
 
 function Contact() {
 
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); // Adjust the breakpoint as needed
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); 
+
+    const [modal, setModal] = useState(false)
+    const handleModalClose = () => setModal(false)
 
     useEffect(() => {
         function handleResize() {
@@ -96,9 +101,13 @@ function Contact() {
 
             setLoading(true)
             
-            if(response?.status === 201) {
+            if(response && response?.status === 201) {
+
                 setLoading(false)
+                setModal(true)
+
                 toast.success('Form submitted')
+
                 setFormData({
                     email: '',
                     phone_number: '',
@@ -174,62 +183,96 @@ function Contact() {
                         <div className='md:p-12 p-4 md:w-3/4 md:rounded-md md:shadow-lg md:shadow-black md:bg-white md:backdrop-blur md:bg-clip-padding md:backdrop-filter md:bg-opacity-5'>
                             <h2 className='font-clash-display text-secondary md:w-64 w-full md:text-lg text-xl font-bold '>Question or need assistance? Let us know about it!</h2>
                             <h3 className='block md:hidden md:mb-12 mb-6'>Email us below to any question related to our event</h3>
-                            <div className='flex-col md:mt-4'>
+                            <div className='flex-col md:mt-6'>
                                 <form onSubmit={handleFormSubmit}>
-                                    <input 
-                                        type="text"
-                                        name='first_name'
-                                        value={formData.first_name}
-                                        onChange={handleInputChange}
-                                        className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur  py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        placeholder='First Name'
-                                        required
-                                    />
-                                    <div className='relative'>
-                                        <input 
-                                            type="email"
-                                            name='email'
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            onBlur={handleBlur}
-                                            className={ formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-red-500 placeholder:text-red-500 focus:text-red-500 focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                            // className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                            placeholder='Email'
-                                            required
-                                        />
-                                        {formErrors.email && (
-                                            <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
-                                        )}
+                                    <div className='flex flex-wrap md:gap-6 gap-4'>
+                                        <div className="relative w-full">
+                                            {/* <label 
+                                                className={formData.first_name ? "absolute -top-5 transition-all duration-300 block tracking-wide text-white text-xs font-bold md:mb-2" : "hidden"}
+                                                htmlFor="first_name"
+                                            >
+                                                First Name
+                                            </label> */}
+                                            <input 
+                                                type="text" 
+                                                name="first_name"
+                                                value={formData.first_name}
+                                                onChange={handleInputChange}
+                                                className={formData.first_name ? 'w-full border px-3 rounded-md bg-secondary  bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary  bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                placeholder='First Name'
+                                                required
+                                            />
+                                        </div>
+                                        <div className="relative w-full">
+                                            {/* <label 
+                                                className={formData.email ? "absolute md:-top-5 -top-4 transition-all duration-300 block tracking-wide text-white text-xs font-bold md:mb-2" : "hidden"}
+                                                htmlFor="email"
+                                            >
+                                                Email
+                                            </label> */}
+                                            <input 
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleInputChange}
+                                                onBlur={handleBlur}
+                                                type="email" 
+                                                className={formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                placeholder='Email'
+                                                required
+                                            />
+                                            {formErrors.email && (
+                                                <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
+                                            )}
+                                        </div>
+                                        <div className="relative w-full">
+                                            {/* <label 
+                                                className={formData.phone_number ? "absolute -top-5 transition-all duration-300 block tracking-wide text-white text-xs font-bold md:mb-2" : "hidden"}
+                                                htmlFor="phone_number"
+                                            >
+                                                Phone Number
+                                            </label> */}
+                                            <input 
+                                                name="phone_number"
+                                                type="number"
+                                                value={formData.phone_number}
+                                                onChange={handleInputChange}
+                                                onBlur={handleBlur}
+                                                className={ formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                placeholder='Enter your phone number'
+                                                required
+                                                maxLength='13'
+                                            />
+                                            {formErrors.phone_number && (
+                                                <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
+                                            )}
+                                        </div>
+                                        <div className='relative w-full'>
+                                            {/* <label 
+                                                className={formData.message ? "absolute -top-5 transition-all duration-300 block tracking-wide text-white text-xs font-bold md:mb-2" : "hidden"}
+                                                htmlFor="phone_number"
+                                            >
+                                                Message
+                                            </label> */}
+                                            <textarea 
+                                                className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                                name="message" 
+                                                value={formData.message}
+                                                onChange={handleInputChange}
+                                                cols="5" 
+                                                rows="3"
+                                                placeholder='Message'
+                                                required
+                                            ></textarea>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input 
-                                            type="number"
-                                            name='phone_number'
-                                            value={formData.phone_number}
-                                            onChange={handleInputChange}
-                                            onBlur={handleBlur}
-                                            className={formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-red-500 placeholder:text-red-500 focus:text-red-500 focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                            // className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                            placeholder='Phone Number'
-                                            required
-                                        />
-                                         {formErrors.phone_number && (
-                                            <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
-                                        )}
-                                    </div>
-                                    <textarea 
-                                        className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        name="message" 
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        cols="5" 
-                                        rows="3"
-                                        placeholder='Message'
-                                        required
-                                    ></textarea>
+
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-4'>
-                                        <button type='submit' className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'>
+                                        <button 
+                                            type='submit' 
+                                            className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
+                                            disabled={loading}
+                                        >   
                                             {loading ? 'Loading...' : 'Submit'}
                                         </button>
                                     </div>
@@ -251,6 +294,7 @@ function Contact() {
                 </div>
             </div>
         {/* </div> */}
+        <ContactModal onClose={handleModalClose} visible={modal} />
     </div>
   )
 }

@@ -30,8 +30,8 @@ function Register() {
     const phoneRegex = /^\d{1,13}$/;
 
     const [loading, setLoading] = useState(false)
-    const [successModal, setSuccessModal] = useState(false)
 
+    const [successModal, setSuccessModal] = useState(false)
     const handleModalClose = () => setSuccessModal(false)
 
     // Set desktop 
@@ -133,6 +133,7 @@ function Register() {
 
         try {
             const response = await axiosPrivate.post('/hackathon/registration', formData)
+
             setLoading(true)
             
             if(response && response?.status === 201) {
@@ -182,7 +183,6 @@ function Register() {
                             <ion-icon name="chevron-back-outline"></ion-icon>
                         </div>
                     </Link>
-                    <h2 className="text-white">Register</h2>
                 </nav>
             )}
 
@@ -410,7 +410,8 @@ function Register() {
                                     <div className='flex justify-center mx-auto md:mt-6 mt-8'>
                                         <button 
                                             type='submit' 
-                                            className='bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'
+                                            className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
+                                            disabled={loading}
                                         >   
                                             {loading ? 'Loading...' : 'Register Now'}
                                             {/* Register Now */}
