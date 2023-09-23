@@ -83,13 +83,13 @@ function Home() {
 
             <div className='md:flex items-center mt-4'>
 
-                <div className='lg:max-w-lg md:mt-0 mt-12'>
+                <div className='lg:max-w-2xl md:mt-0 mt-12'>
                     <Slide
                         direction='left'
                         cascade
                         duration={2000}
                     >
-                        <h2 className='lg:text-8xl md:text-2xl text-5xl md:text-left text-center font-extrabold font-clash-display relative'>
+                        <h2 className='lg:text-7xl md:text-lg text-4xl md:text-left text-center font-extrabold font-clash-display relative'>
                                 <span className='absolute lg:-top-14 md:right-16 -top-6 right-10'><img src={Creative} alt="creative" className='lg:w-full w-6' /></span>
                                 getlinked Tech Hackathon <span className='text-secondary'>1.0</span> 
                                 <span className='flex absolute lg:bottom-5 bottom-3 lg:-right-6 -right-5'><img src={Chain} alt="Chain" className='lg:w-14 w-6' /> <img src={Flare} alt="Flare" className='w-5 lg:w-12' /> </span>
