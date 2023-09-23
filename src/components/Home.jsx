@@ -170,7 +170,7 @@ function Home() {
 
             <div className='md:flex md:justify-between justify-center items-center py-12 mt-4'>
                 
-                <div className='lg:w-6/12 md:w-5/12 order-last'>
+                <div className='md:w-5/12 order-last'>
                     <JackInTheBox delay={500} duration={700}>
                         <img src={Rules} alt="idea"  />
                     </JackInTheBox>
@@ -201,13 +201,14 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
             <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
+
                 <div className='lg:w-6/12 md:w-5/12 '>
                     <Slide direction='left' duration={1000} delay={1000}>
                         <img src={Criteria} alt="idea" className='' />
                     </Slide>
                 </div>
 
-                <div className='flex flex-col max-w-xl md:mt-0 mt-12'>
+                <div className='flex flex-col lg:max-w-xl md:mt-0 mt-12'>
                     <Slide direction='down' delay={100}>
                         <div className='flex md:justify-start justify-center'>
                             <h2 className='md:max-w-sm md:w-full w-3/4 font-clash-display font-semibold md:text-5xl text-3xl md:text-left text-center'>Judging Criteria <span className='text-secondary'>Key attributes</span></h2>
@@ -565,7 +566,7 @@ function Home() {
                 </div>
             </Slide>
 
-            <div className='lg:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
 
 
                 <div className='lg:w-10/12 md:w-5/12'>
@@ -707,7 +708,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute bottom-[32%] right-[45%]  w-3 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute top-[20%] right-[60%] w-4 animate-pulse' />
 
-            <div className="md:flex md:justify-between justify-center py-10 mt-2">
+            <div className="md:flex lg:justify-between justify-center py-10 mt-2">
                 <div className='lg:w-7/12'>
                     <div className='flex flex-col'>
                         <Slide>
