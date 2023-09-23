@@ -378,7 +378,7 @@ function Home() {
                         </Roll>
                     </div>
                     <div className='lg:w-6/12 md:w-5/12 '>
-                        <JackInTheBox delay={1500}>
+                        <JackInTheBox delay={1000}>
                             <img src={FAQ} alt="idea" className='' />
                         </JackInTheBox>
                     </div>
@@ -710,7 +710,7 @@ function Home() {
         </section>
 
         {/* privacy  */}
-        <section className='border-b border-gray-700 md:px-24 px-8 relative md:py-12'>
+        <section className='border-b border-gray-700 md:px-24 px-8 relative md:py-16'>
 
             <img src={StarPu} alt="star" className='absolute md:bottom-1/2 md:left-12 w-4 animate-pulse' />
             <div className="absolute md:-bottom-24 bottom-1/2 md:-left-24 -left-24 md:w-96 md:h-96 w-64 h-64 bg-primary rounded-full blur-3xl opacity-30 "></div>
@@ -780,9 +780,9 @@ function Home() {
                     </div>
                 </div>
                 {/* image */}
-                <div className='relative md:mt-0 mt-12 lg:py-0 py-6'>
+                <div className='relative md:mt-0 mt-12 lg:py-0 py-8'>
                     <img src={Shield} alt="shield" className='lg:w-10/12 ' />
-                    <div className='lg:w-10/12 md:w-9/12 w-64 absolute lg:bottom-2 lg:left-0 bottom-0 top-36 left-8'>
+                    <div className='lg:w-9/12 md:w-9/12 w-64 absolute lg:bottom-2 lg:left-0 bottom-0 top-36 left-8'>
                         <Zoom direction='right' delay={500}>
                             <img src={ShieldMan} alt="shield" className='' />
                         </Zoom>
