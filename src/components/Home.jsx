@@ -1,8 +1,9 @@
 
 import { Link } from 'react-router-dom';
+import { useRef,useEffect } from "react";
+import Typed from "typed.js";
 
 import { Bounce, Slide, Roll, JackInTheBox, Zoom } from 'react-awesome-reveal';
-
 
 
 import Navbar from '../layouts/Navbar';
@@ -24,7 +25,6 @@ import Criteria from '../assets/criteria.png'
 import Question from '../assets/question.png'
 import FAQ from '../assets/faq.png'
 import Prize from '../assets/prize.png'
-// import Gold from '../assets/gold.svg'
 import GoldM from '../assets/gold_medal.png'
 import Silver from '../assets/silver.svg'
 import Bronze from '../assets/bronze.svg'
@@ -39,6 +39,21 @@ import Whishper from '../assets/logo/whisper.png'
 import Winwise from '../assets/logo/winwise.png'
 import Vizual from '../assets/logo/vizual.png'
 import Timer from './Timer';
+
+const Typewriter = () => {
+  const typedElementRef = useRef(null);
+  useEffect(() => {
+    const options = {
+      strings: ["Igniting a Revolution in HR Innovation"], // An array of strings to type out
+      typeSpeed: 50, // Typing speed in milliseconds
+    };
+    const typed = new Typed(typedElementRef.current, options);
+    return () => {
+      typed.destroy(); // Clean up Typed.js on component unmount
+    };
+  }, []);
+  return <span ref={typedElementRef}></span>;
+};
 
 
 function Home() {
@@ -56,9 +71,8 @@ function Home() {
             
             <div className="flex md:justify-end justify-center mt-4">
                     <h2 className="lg:text-3xl w-auto md:relative font-semibold italic">
-                        {/* <Typist avgTypingDelay={100}> */}
-                            Ignitting a Revolution in HR Innovation
-                        {/* </Typist> */}
+                            {/* Ignitting a Revolution in HR Innovation */}
+                        <Typewriter />
                         <img 
                             src={Vector} 
                             alt="vector" 

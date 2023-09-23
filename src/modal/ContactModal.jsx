@@ -1,4 +1,3 @@
-import Congratulation from '../assets/congratulation.svg'
 
 function SuccessModal({onClose, visible}) {
 
