@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import toast, { Toaster } from 'react-hot-toast'
 
-import { Bounce, Slide, Roll, JackInTheBox, Zoom } from 'react-awesome-reveal';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 import ContactModal from '../modal/ContactModal'
 
@@ -219,15 +219,17 @@ function Contact() {
                                             >
                                                 First Name
                                             </label> */}
-                                            <input 
-                                                type="text" 
-                                                name="first_name"
-                                                value={formData.first_name}
-                                                onChange={handleInputChange}
-                                                className={formData.first_name ? 'w-full border px-3 rounded-md bg-secondary  bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none' : 'w-full border px-3 rounded-md bg-secondary  bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                                placeholder='First Name'
-                                                required
-                                            />
+                                            <Fade duration={2000} >
+                                                <input 
+                                                    type="text" 
+                                                    name="first_name"
+                                                    value={formData.first_name}
+                                                    onChange={handleInputChange}
+                                                    className='duration-300 w-full border px-3 rounded-md bg-secondary  bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                                    placeholder='First Name'
+                                                    required
+                                                />
+                                            </Fade>
                                         </div>
                                         <div className="relative w-full">
                                             {/* <label 
@@ -236,16 +238,19 @@ function Contact() {
                                             >
                                                 Email
                                             </label> */}
-                                            <input 
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                onBlur={handleBlur}
-                                                type="email" 
-                                                className={formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                                placeholder='Email'
-                                                required
-                                            />
+                                            <Fade duration={2000} >
+                                                
+                                                <input 
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleInputChange}
+                                                    onBlur={handleBlur}
+                                                    type="email" 
+                                                    className={formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                    placeholder='Email'
+                                                    required
+                                                />
+                                            </Fade>
                                             {formErrors.email && (
                                                 <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
                                             )}
@@ -257,17 +262,19 @@ function Contact() {
                                             >
                                                 Phone Number
                                             </label> */}
-                                            <input 
-                                                name="phone_number"
-                                                type="number"
-                                                value={formData.phone_number}
-                                                onChange={handleInputChange}
-                                                onBlur={handleBlur}
-                                                className={ formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
-                                                placeholder='Enter your phone number'
-                                                required
-                                                maxLength='13'
-                                            />
+                                            <Fade duration={2000} >
+                                                <input 
+                                                    name="phone_number"
+                                                    type="number"
+                                                    value={formData.phone_number}
+                                                    onChange={handleInputChange}
+                                                    onBlur={handleBlur}
+                                                    className={ formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'}
+                                                    placeholder='Enter your phone number'
+                                                    required
+                                                    maxLength='13'
+                                                />
+                                            </Fade>
                                             {formErrors.phone_number && (
                                                 <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
                                             )}
@@ -279,28 +286,32 @@ function Contact() {
                                             >
                                                 Message
                                             </label> */}
-                                            <textarea 
-                                                className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                                name="message" 
-                                                value={formData.message}
-                                                onChange={handleInputChange}
-                                                cols="5" 
-                                                rows="3"
-                                                placeholder='Message'
-                                                required
-                                            ></textarea>
+                                            <Fade duration={2000} >
+                                                <textarea 
+                                                    className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                                    name="message" 
+                                                    value={formData.message}
+                                                    onChange={handleInputChange}
+                                                    cols="5" 
+                                                    rows="3"
+                                                    placeholder='Message'
+                                                    required
+                                                ></textarea>
+                                            </Fade>
                                         </div>
                                     </div>
 
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-4'>
-                                        <button 
-                                            type='submit' 
-                                            className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
-                                            disabled={loading}
-                                        >   
-                                            {loading ? 'Loading...' : 'Submit'}
-                                        </button>
+                                        <Fade duration={3000} >
+                                            <button 
+                                                type='submit' 
+                                                className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
+                                                disabled={loading}
+                                            >   
+                                                {loading ? 'Loading...' : 'Submit'}
+                                            </button>
+                                        </Fade>
                                     </div>
                                 </form>
 

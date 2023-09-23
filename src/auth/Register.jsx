@@ -5,6 +5,7 @@ import axiosPrivate from "../api/axios";
 
 import toast, { Toaster } from 'react-hot-toast'
 
+import { Slide, Fade } from "react-awesome-reveal";
 
 // import ErrorAlert from "../lib/ErrorAlert";
 
@@ -196,7 +197,9 @@ function Register() {
                 <div className='md:flex lg:py-4 md:py-6 sm:py-1 w-full h-full'>
                     
                     <div className='md:mt-0 hidden lg:flex justify-center sm:justify-center md:w-6/12'>
-                        <img src={RegistrationVector} alt="Register" className="md:w-full w-7/12" />
+                        <Slide duration={2000} direction="top">
+                            <img src={RegistrationVector} alt="Register" className="md:w-full w-7/12" />
+                        </Slide>
                     </div>
 
                     <div className='lg:w-7/12 md:h-max h-max md:mt-6 mt-0'>
@@ -212,210 +215,217 @@ function Register() {
                                 <form onSubmit={handleFormSubmit}>
                                     <div className="flex flex-wrap md:gap-6 gap-4">
                                         
-                                        <div className="w-full md:w-72 ">
-                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team's name</label>
-                                            <input 
-                                                name="team_name"
-                                                value={formData.team_name}
-                                                onChange={handleInputChange}
-                                                type="text" 
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
-                                                placeholder='Enter the name of your group'
-                                                required
-                                            />
-                                        </div>
-                                        <div className="w-full md:w-72">
-                                            <label 
-                                                className={errors?.email || formErrors.email ? 'block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
-                                                htmlFor="email"
-                                            >
-                                                Email
-                                            </label>
-                                            <input 
-                                                name="email"
-                                                value={formData.email}
-                                                onChange={handleInputChange}
-                                                onBlur={handleBlur}
-                                                type="email" 
-                                                className={errors?.email || formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
-                                                placeholder='Enter your email address'
-                                                required
-                                            />
-                                            {errors.email && (
-                                                <div className="mt-1 text-xs text-red-500">
-                                                    {errors?.email.map((error, index) => (
-                                                        <span key={index}>{error}</span>
-                                                    ))}
-                                                </div>
-                                            )}
-                                            {formErrors.email && (
-                                                <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
-                                            )}
-                                        </div>
-                                        <div className="w-full md:w-72">
-                                            <label 
-                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
-                                                htmlFor="phone_number"
-                                            >
-                                                Phone Number
-                                            </label>
-                                            <input 
-                                                name="phone_number"
-                                                type="number"
-                                                value={formData.phone_number}
-                                                onChange={handleInputChange}
-                                                onBlur={handleBlur}
-                                                className={errors?.phone_number || formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
-                                                placeholder='Enter your phone number'
-                                                required
-                                                maxLength='13'
-                                            />
-                                            {errors.phone_number && (
-                                                <div className="mt-1 text-xs text-red-500">
-                                                    {errors?.phone_number.map((error, index) => (
-                                                        <span key={index}>{error}</span>
-                                                    ))}
-                                                </div>
-                                            )}
-                                            {formErrors.phone_number && (
-                                                <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
-                                            )}
-                                        </div>
-                                        <div className="w-full md:w-72 ">
-                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="project_topic">Project Topic</label>
-                                            <input 
-                                                type="text" 
-                                                name="project_topic"
-                                                value={formData.project_topic}
-                                                onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
-                                                placeholder='What is your project topic?'
-                                                required
-                                            />
-                                        </div>
-                                        <div className="w-7/12 md:w-7/12 lg:w-72 ">
-                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
-                                            <select 
-                                                name="category"
-                                                value={formData.category}
-                                                onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
-                                            >
-                                                <option
-                                                    value=''
-                                                    disabled
-                                                    className="bg-main"
+                                        <Fade duration={2000} >
+                                            <div className="w-full md:w-72 ">
+                                                <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="team_name">Team's name</label>
+                                                <input 
+                                                    name="team_name"
+                                                    value={formData.team_name}
+                                                    onChange={handleInputChange}
+                                                    type="text" 
+                                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
+                                                    placeholder='Enter the name of your group'
+                                                    required
+                                                />
+                                            </div>
+                                            <div className="w-full md:w-72">
+                                                <label 
+                                                    className={errors?.email || formErrors.email ? 'block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                    htmlFor="email"
                                                 >
-                                                    Select Category
-                                                </option>
-                                                {categories.map(cat => (
-                                                    // <div key={cat.id}>
-                                                    <option 
-                                                        key={cat.id}
-                                                        value={cat.id}
+                                                    Email
+                                                </label>
+                                                <input 
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleInputChange}
+                                                    onBlur={handleBlur}
+                                                    type="email" 
+                                                    className={errors?.email || formErrors.email ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
+                                                    placeholder='Enter your email address'
+                                                    required
+                                                />
+                                                {errors.email && (
+                                                    <div className="mt-1 text-xs text-red-500">
+                                                        {errors?.email.map((error, index) => (
+                                                            <span key={index}>{error}</span>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                {formErrors.email && (
+                                                    <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
+                                                )}
+                                            </div>
+                                            <div className="w-full md:w-72">
+                                                <label 
+                                                    className={errors?.phone_number || formErrors.phone_number ? 'w-full block tracking-wide text-red-500 text-xs font-bold md:mb-2' : 'block tracking-wide text-white text-xs font-bold md:mb-2'}
+                                                    htmlFor="phone_number"
+                                                >
+                                                    Phone Number
+                                                </label>
+                                                <input 
+                                                    name="phone_number"
+                                                    type="number"
+                                                    value={formData.phone_number}
+                                                    onChange={handleInputChange}
+                                                    onBlur={handleBlur}
+                                                    className={errors?.phone_number || formErrors.phone_number ? 'w-full border px-3 rounded-md bg-red-500 bg-opacity-5 backdrop-blur py-2  focus:ring-red-500 focus:outline-none focus:border-red-500 text-red-300 placeholder:text-red-500' : 'w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'}
+                                                    placeholder='Enter your phone number'
+                                                    required
+                                                    maxLength='13'
+                                                />
+                                                {errors.phone_number && (
+                                                    <div className="mt-1 text-xs text-red-500">
+                                                        {errors?.phone_number.map((error, index) => (
+                                                            <span key={index}>{error}</span>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                {formErrors.phone_number && (
+                                                    <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
+                                                )}
+                                            </div>
+                                            <div className="w-full md:w-72 ">
+                                                <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="project_topic">Project Topic</label>
+                                                <input 
+                                                    type="text" 
+                                                    name="project_topic"
+                                                    value={formData.project_topic}
+                                                    onChange={handleInputChange}
+                                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white placeholder:text-gray-500 focus:text-white focus:outline-none'
+                                                    placeholder='What is your project topic?'
+                                                    required
+                                                />
+                                            </div>
+                                            <div className="w-7/12 md:w-7/12 lg:w-72 ">
+                                                <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="category">Category</label>
+                                                <select 
+                                                    name="category"
+                                                    value={formData.category}
+                                                    onChange={handleInputChange}
+                                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
+                                                >
+                                                    <option
+                                                        value=''
+                                                        disabled
                                                         className="bg-main"
                                                     >
-                                                        {cat.name}
+                                                        Select Category
                                                     </option>
-                                                    // </div>
-                                                ))}
-                                            </select>
-                                        </div>
-                                        <div className="w-4/12 md:w-72 ">
-                                            <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
-                                            <select 
-                                                name="group_size"
-                                                value={formData.group_size}
-                                                onChange={handleInputChange}
-                                                className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
-                                            >
-                                                <option 
-                                                    value="1"
-                                                    className="bg-main"
+                                                    {categories.map(cat => (
+                                                        // <div key={cat.id}>
+                                                        <option 
+                                                            key={cat.id}
+                                                            value={cat.id}
+                                                            className="bg-main"
+                                                        >
+                                                            {cat.name}
+                                                        </option>
+                                                        // </div>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                            <div className="w-4/12 md:w-72 ">
+                                                <label className="block tracking-wide text-white text-xs font-bold md:mb-2" htmlFor="group_size">Group size</label>
+                                                <select 
+                                                    name="group_size"
+                                                    value={formData.group_size}
+                                                    onChange={handleInputChange}
+                                                    className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur py-2 text-white focus:text-white focus:outline-none'
                                                 >
-                                                    1
-                                                </option>
-                                                <option 
-                                                    value="2"
-                                                    className="bg-main"
-                                                >
-                                                    2
-                                                </option>
-                                                <option 
-                                                    value="3"
-                                                    className="bg-main"
-                                                >
-                                                    3
-                                                </option>
-                                                <option 
-                                                    value="4"
-                                                    className="bg-main"
-                                                >
-                                                    4
-                                                </option>
-                                                <option 
-                                                    value="5"
-                                                    className="bg-main"
-                                                >
-                                                    5
-                                                </option>
-                                                <option 
-                                                    value="6"
-                                                    className="bg-main"
-                                                >
-                                                    6
-                                                </option>
-                                                <option 
-                                                    value="7"
-                                                    className="bg-main"
-                                                >
-                                                    7
-                                                </option>
-                                                <option 
-                                                    value="8"
-                                                    className="bg-main"
-                                                >
-                                                    8
-                                                </option>
-                                                <option 
-                                                    value="9"
-                                                    className="bg-main"
-                                                >
-                                                    9
-                                                </option>
-                                                <option 
-                                                    value="10"
-                                                    className="bg-main"
-                                                >
-                                                    10
-                                                </option>
-                                            </select>
-                                        </div>
+                                                    <option 
+                                                        value="1"
+                                                        className="bg-main"
+                                                    >
+                                                        1
+                                                    </option>
+                                                    <option 
+                                                        value="2"
+                                                        className="bg-main"
+                                                    >
+                                                        2
+                                                    </option>
+                                                    <option 
+                                                        value="3"
+                                                        className="bg-main"
+                                                    >
+                                                        3
+                                                    </option>
+                                                    <option 
+                                                        value="4"
+                                                        className="bg-main"
+                                                    >
+                                                        4
+                                                    </option>
+                                                    <option 
+                                                        value="5"
+                                                        className="bg-main"
+                                                    >
+                                                        5
+                                                    </option>
+                                                    <option 
+                                                        value="6"
+                                                        className="bg-main"
+                                                    >
+                                                        6
+                                                    </option>
+                                                    <option 
+                                                        value="7"
+                                                        className="bg-main"
+                                                    >
+                                                        7
+                                                    </option>
+                                                    <option 
+                                                        value="8"
+                                                        className="bg-main"
+                                                    >
+                                                        8
+                                                    </option>
+                                                    <option 
+                                                        value="9"
+                                                        className="bg-main"
+                                                    >
+                                                        9
+                                                    </option>
+                                                    <option 
+                                                        value="10"
+                                                        className="bg-main"
+                                                    >
+                                                        10
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </Fade>
 
                                     </div>
-
-                                    <h2 className="italic text-secondary md:text-sm text-[10px] mt-4">Please revieew your registration details before submitting</h2>
-
+                                    
+                                    <Fade duration={2000} >
+                                        <h2 className="italic text-secondary md:text-sm text-[10px] mt-4">Please revieew your registration details before submitting</h2>
+                                    </Fade>
                                     <label className="text-sm">
-                                        <input
-                                            name="privacy_poclicy_accepted"
-                                            type="checkbox"
-                                            checked={formData.privacy_poclicy_accepted}
-                                            onChange={handleCheckboxChange}
-                                            required
-                                        />
-                                        I agreed with the event terms and conditions and privacy policy
+                                        <Fade duration={2000} >
+                                            <input
+                                                name="privacy_poclicy_accepted"
+                                                type="checkbox"
+                                                checked={formData.privacy_poclicy_accepted}
+                                                onChange={handleCheckboxChange}
+                                                required
+                                            />
+                                            I agreed with the event terms and conditions and privacy policy
+                                        </Fade>
                                     </label>
 
                                     <div className='flex justify-center mx-auto md:mt-6 mt-8'>
-                                        <button 
-                                            type='submit' 
-                                            className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
-                                            disabled={loading}
-                                        >   
-                                            {loading ? 'Loading...' : 'Register Now'}
-                                            {/* Register Now */}
-                                        </button>
+                                        <Fade duration={2000} >
+                                            <button 
+                                                type='submit' 
+                                                className={loading ? 'bg-gray-500 text-white py-2 px-8 rounded-sm' : 'bg-gradient-to-r from-lgrad to-grad py-2 px-8 rounded-sm'}
+                                                disabled={loading}
+                                            >   
+                                                {loading ? 'Loading...' : 'Register Now'}
+                                                {/* Register Now */}
+                                            </button>
+                                        </Fade>
                                     </div>
                                 </form>
 
