@@ -70,7 +70,7 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:top-[70%] md:left-[35%] top-1/2 left-1/2 w-3 animate-pulse' />
             
             <div className="flex md:justify-end justify-center mt-4">
-                    <h2 className="lg:text-3xl w-auto md:relative font-semibold italic">
+                    <h2 className="lg:text-3xl md:text-2xl w-auto md:relative font-semibold italic">
                             {/* Ignitting a Revolution in HR Innovation */}
                         <Typewriter />
                         <img 
