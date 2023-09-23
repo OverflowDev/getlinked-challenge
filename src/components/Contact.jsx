@@ -23,6 +23,14 @@ function Contact() {
         };
     }, []);
 
+    const [formErrors, setFormErrors] = useState({
+        email: '',
+        phone_number: ''
+    })
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^\d{1,13}$/;
+
     const [loading, setLoading] = useState(false)
 
     const [formData, setFormData] = useState({
@@ -36,6 +44,47 @@ function Contact() {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
+        })
+    }
+
+    const handleBlur = (e) => {
+        // setFormData({
+        //     ...formData,
+        //     [e.target.name]: e.target.value
+        // })
+        const {name, value} = e.target
+
+        // validate email and number 
+        if(name === 'email') {
+            if(!emailRegex.test(value)) {
+                setFormErrors({
+                    ...formErrors,
+                    email: 'Invalid Email address'
+                })
+            } else {
+                setFormErrors({
+                    ...formErrors,
+                    email: ''
+                })
+            }
+        } else if(name === 'phone_number') {
+            if(!phoneRegex.test(value)) {
+                setFormErrors({
+                    ...formErrors,
+                    phone_number: 'Invalid phone number (max 13 digits)'
+                })
+            } else {
+                setFormErrors({
+                    ...formErrors,
+                    phone_number: ''
+                })
+            }
+        }
+
+        // set value 
+        setFormData({
+            ...formData,
+            [name]: value
         })
     }
 
@@ -136,24 +185,36 @@ function Contact() {
                                         placeholder='First Name'
                                         required
                                     />
-                                    <input 
-                                        type="email"
-                                        name='email'
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        placeholder='Email'
-                                        required
-                                    />
-                                    <input 
-                                        type="number"
-                                        name='phone_number'
-                                        value={formData.phone_number}
-                                        onChange={handleInputChange}
-                                        className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
-                                        placeholder='Phone Number'
-                                        required
-                                    />
+                                    <div>
+                                        <input 
+                                            type="email"
+                                            name='email'
+                                            value={formData.email}
+                                            onChange={handleInputChange}
+                                            onBlur={handleBlur}
+                                            className='w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                            placeholder='Email'
+                                            required
+                                        />
+                                        {formErrors.email && (
+                                            <div className="mt-1 text-xs text-red-500">{formErrors.email}</div>
+                                        )}
+                                    </div>
+                                    <div>
+                                        <input 
+                                            type="number"
+                                            name='phone_number'
+                                            value={formData.phone_number}
+                                            onChange={handleInputChange}
+                                            onBlur={handleBlur}
+                                            className='appearance-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
+                                            placeholder='Phone Number'
+                                            required
+                                        />
+                                         {formErrors.phone_number && (
+                                            <div className="mt-1 text-xs text-red-500">{formErrors.phone_number}</div>
+                                        )}
+                                    </div>
                                     <textarea 
                                         className='resize-none w-full border px-3 rounded-md bg-secondary bg-opacity-5 backdrop-blur md:mt-6 mt-8 py-2 text-white placeholder:text-white focus:text-white focus:outline-none'
                                         name="message" 
