@@ -124,10 +124,9 @@ function Home() {
             <img src={Arrow} alt="star" className='absolute md:bottom-20 md:right-[50%] bottom-[51%] right-[45%] w-12 animate-pulse' />
 
             <div 
-                // className={`md:flex md:justify-between justify-center items-center py-12 mt-4 ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out`} 
-                className='md:flex md:justify-between justify-center items-center py-12 mt-4'
+                className='flex flex-wrap lg:justify-between justify-center items-center py-12 mt-4'
             >
-                    <div className='md:w-5/12'>
+                    <div className='lg:w-5/12'>
                         <Bounce delay={1000}>
                             <img 
                                 src={Idea} 
@@ -137,7 +136,7 @@ function Home() {
                         </Bounce>
                     </div>
 
-                <div className='flex flex-col md:max-w-xl md:mt-0 mt-20' id='fade-in-section'>
+                <div className='flex flex-col lg:max-w-xl md:mt-2 mt-20' id='fade-in-section'>
                     <Slide
                         direction='down'
                     >
@@ -168,9 +167,9 @@ function Home() {
             <img src={Star} alt="star" className='absolute md:top-[20%] md:left-[20%] w-3 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
-            <div className='md:flex md:justify-between justify-center items-center py-12 mt-4'>
+            <div className='flex flex-wrap lg:justify-between justify-center items-center py-12 mt-4'>
                 
-                <div className='md:w-5/12 order-last'>
+                <div className='lg:w-6/12 md:w-5/12 lg:order-last'>
                     <JackInTheBox delay={500} duration={700}>
                         <img src={Rules} alt="idea"  />
                     </JackInTheBox>
@@ -200,7 +199,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[10%] md:left-[20%] w-4 animate-pulse' />
             <img src={Star} alt="star" className='absolute md:bottom-[20%] md:right-[50%] bottom-[47%] right-[10%] w-4 animate-pulse' />
 
-            <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
+            <div className='flex flex-wrap lg:justify-between justify-center items-center py-10 mt-2'>
 
                 <div className='lg:w-6/12 md:w-5/12 '>
                     <Slide direction='left' duration={1000} delay={1000}>
@@ -246,7 +245,7 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute md:top-[20%] md:right-[33%] w-4 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute md:top-[40%] md:right-[40%] w-4 animate-pulse' />
 
-            <div className='md:flex md:justify-between justify-center items-center py-10 mt-2'>
+            <div className='flex flex-wrap lg:justify-between justify-center items-center py-10 mt-2'>
 
                 <div className='flex flex-col lg:justify-between justify-center max-w-xl md:mt-24 mt-12'>
                     <Slide direction='down'>
@@ -353,7 +352,7 @@ function Home() {
                 </div>
 
                 <div className='flex relative justify-center mt-12'>
-                    <div className='flex items-center gap-6 justify-center absolute md:-top-20 -top-10 md:right-[50%] right-[45%]'>
+                    <div className='lg:mt-0 mt-3 flex items-center gap-6 justify-center absolute md:-top-20 -top-10 md:right-[50%] right-[45%]'>
                         <Roll delay={1500}>
                             <img src={Question} alt="question" className='md:w-8 w-6' />
                         </Roll>
@@ -364,7 +363,7 @@ function Home() {
                             <img src={Question} alt="question" className='md:w-8 w-6' />
                         </Roll>
                     </div>
-                    <div className='md:w-8/12'>
+                    <div className='lg:w-6/12 md:w-5/12 '>
                         <JackInTheBox delay={1500}>
                             <img src={FAQ} alt="idea" className='' />
                         </JackInTheBox>
@@ -566,16 +565,16 @@ function Home() {
                 </div>
             </Slide>
 
-            <div className='lg:flex lg:justify-between justify-center items-center py-10 mt-2'>
+            <div className='flex flex-wrap lg:justify-between justify-center items-center py-10 mt-2'>
 
 
-                <div className='lg:w-10/12 md:w-5/12'>
+                <div className='lg:w-6/12 md:w-5/12'>
                     <Bounce delay={100} duration={300}>
                         <img src={Prize} alt="idea" className='lg:w-full' />
                     </Bounce>
                 </div>
 
-                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-6 mt-16 w-full font-montserrat'>
+                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-6 md:mt-24 mt-12 w-full font-montserrat'>
                     
                     <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
                         <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
@@ -708,7 +707,8 @@ function Home() {
             <img src={StarPu} alt="star" className='absolute bottom-[32%] right-[45%]  w-3 animate-pulse' />
             <img src={StarPu} alt="star" className='absolute top-[20%] right-[60%] w-4 animate-pulse' />
 
-            <div className="md:flex lg:justify-between justify-center py-10 mt-2">
+            <div className="flex flex-wrap lg:justify-between justify-center py-10 mt-2">
+                
                 <div className='lg:w-7/12'>
                     <div className='flex flex-col'>
                         <Slide>
@@ -724,7 +724,7 @@ function Home() {
                         </Slide>
                     </div>
                     
-                    <div className='mt-4 md:w-9/12 md:p-12 p-8 rounded border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 shadow-lg'>
+                    <div className='mt-4 lg:w-9/12  md:p-12 p-8 rounded border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 shadow-lg'>
                         <p className='text-sm'>
                             At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy
                         </p>
@@ -768,7 +768,7 @@ function Home() {
                 {/* image */}
                 <div className='relative md:mt-0 mt-12 lg:py-0 py-6'>
                     <img src={Shield} alt="shield" className='lg:w-10/12 ' />
-                    <div className='lg:w-10/12 md:w-7/12 w-64 absolute lg:bottom-2 lg:left-0  bottom-0 top-36 left-8'>
+                    <div className='lg:w-10/12 md:w-9/12 w-64 absolute lg:bottom-2 lg:left-0 bottom-0 top-36 left-8'>
                         <Zoom direction='right' delay={500}>
                             <img src={ShieldMan} alt="shield" className='' />
                         </Zoom>
