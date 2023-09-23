@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import toast, { Toaster } from 'react-hot-toast'
 
+import { Bounce, Slide, Roll, JackInTheBox, Zoom } from 'react-awesome-reveal';
+
 import ContactModal from '../modal/ContactModal'
 
 import Star from '../assets/star.svg'
@@ -149,35 +151,37 @@ function Contact() {
                 <img src={StarPu} alt="star" className='absolute md:bottom-[20%] md:right-[10%] top-[10%] right-[10%] w-4 animate-pulse' />
 
                 <div className='lg:flex lg:justify-between lg:items-center lg:py-12 py-2 w-full h-full lg:mt-0 '>
-                    
-                    <div className='hidden lg:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
-                        <div className='md:flex md:justify-start justify-center hidden'>
-                            <h2 className='md:max-w-sm md:w-full w-3/4 font-semibold md:text-5xl text-3xl md:text-left text-center text-secondary font-clash-display'>Get in Touch</h2>
-                        </div>
-                        <h2 className=' w-32 font-semibold font-montserrat'>
-                            Contact Information
-                        </h2>
-                        <h2 className=' w-32 font-semibold font-montserrat'>
-                            27,Alara Street
-                            Yaba 100012
-                            Lagos State
-                        </h2>
-                        <h2 className=' max-w-md font-semibold font-montserrat'>
-                            Call Us : 07067981819
-                        </h2>
-                        <h2 className=' max-w-xs font-semibold font-montserrat'>
-                            we are open from Monday-Friday 08:00am - 05:00pm
-                        </h2>
-                        <div className='flex-col '>
-                            <h2 className="text-secondary text-sm font-bold">Follow us</h2>
-                            <div className='flex items-center space-x-2 mt-2'>
-                                <ion-icon name="logo-instagram"></ion-icon>
-                                <ion-icon name="logo-twitter"></ion-icon>
-                                <ion-icon name="logo-facebook"></ion-icon>
-                                <ion-icon name="logo-linkedin"></ion-icon>
+                    <Slide>
+
+                        <div className='hidden lg:flex flex-col max-w-xl md:mt-0 mt-12 gap-4'>
+                            <div className='md:flex md:justify-start justify-center hidden'>
+                                <h2 className='md:max-w-sm md:w-full w-3/4 font-semibold md:text-5xl text-3xl md:text-left text-center text-secondary font-clash-display'>Get in Touch</h2>
+                            </div>
+                            <h2 className=' w-32 font-semibold font-montserrat'>
+                                Contact Information
+                            </h2>
+                            <h2 className=' w-32 font-semibold font-montserrat'>
+                                27,Alara Street
+                                Yaba 100012
+                                Lagos State
+                            </h2>
+                            <h2 className=' max-w-md font-semibold font-montserrat'>
+                                Call Us : 07067981819
+                            </h2>
+                            <h2 className=' max-w-xs font-semibold font-montserrat'>
+                                we are open from Monday-Friday 08:00am - 05:00pm
+                            </h2>
+                            <div className='flex-col '>
+                                <h2 className="text-secondary text-sm font-bold">Follow us</h2>
+                                <div className='flex items-center space-x-2 mt-2'>
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Slide>
 
                     <div className='hidden lg:hidden md:flex flex-wrap mt-12 mb-12'>
                         <h2 className='w-full font-semibold text-5xl text-center text-secondary font-clash-display'>Get in Touch</h2>
