@@ -389,7 +389,7 @@ function Home() {
                 <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50">
                     {/* 1*/}
                     <div className="flex flex-row-reverse md:contents">
-                        <div className=" col-start-1 col-end-5 p-4 my-4 ml-auto">
+                        <div className=" col-start-1 col-end-5 p-4 my-4 ml-auto ">
                             <Slide delay={200}>
                                 <h3 className="font-semibold md:text-lg mb-1 text-secondary">Hackathon Announcement</h3>
                                 <p className="leading-tight text-justify font-montserrat text-sm">
@@ -441,11 +441,33 @@ function Home() {
                     </div>
 
                     {/* 3*/}
-                    <div className="flex flex-row-reverse md:contents">
-                        <div className=" col-start-1 col-end-5 p-4 my-4 ml-auto">
-                            <Slide direction='left' delay={400}>
+                    {/* <div className="flex flex-row-reverse md:contents">
+                        <div className=" col-start-1 col-end-5 p-4 my-4 ml-auto ">
+                            <Slide delay={400} className=''>
                                 <h3 className="font-semibold md:text-lg mb-1 text-secondary">Team Registration ends</h3>
                                 <p className="leading-tight md:text-right text-sm font-montserrat">
+                                    Interested participants are no longer allowed to register
+                                </p>
+                                <h3 className="mt-2 md:hidden font-semibold text-md mb-1 text-secondary">September 18, 2023</h3>
+                            </Slide>
+                        </div>
+                        <div className="col-start-5 col-end-6 md:mx-auto relative mr-10  ">
+                            <div className="h-full w-8 flex items-center justify-center">
+                                <div className="h-full w-1 bg-secondary pointer-events-none"></div>
+                            </div>
+                            <div className="w-8 h-8 absolute top-1/2 -mt-3 rounded-full bg-gradient-to-r from-lgrad to-grad shadow flex items-center justify-center font-bold border-4 border-main">3</div>
+                        </div>
+                        <div className="col-start-6 col-end-10 p-4 my-4 mr-auto md:flex items-center justify-center hidden">
+                            <Slide direction='right'>
+                                <h3 className=" font-semibold text-lg mb-1 text-secondary">September 18, 2023</h3>
+                            </Slide>
+                        </div>
+                    </div> */}
+                    <div className="flex flex-row-reverse md:contents">
+                        <div className=" col-start-1 col-end-5 p-4 my-4 ml-auto ">
+                            <Slide delay={200}>
+                                <h3 className="font-semibold md:text-lg mb-1 text-secondary">Team Registration ends</h3>
+                                <p className="leading-tight text-justify font-montserrat text-sm md:w-screen">
                                     Interested participants are no longer allowed to register
                                 </p>
                                 <h3 className="mt-2 md:hidden font-semibold text-md mb-1 text-secondary">September 18, 2023</h3>
