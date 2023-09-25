@@ -588,7 +588,7 @@ function Home() {
                     </Bounce>
                 </div>
 
-                <div className='flex md:gap-4 gap-2 items-center justify-center lg:mt-6 md:mt-24 mt-12 w-full font-montserrat'>
+                <div className='flex lg:w-6/12 md:gap-4 gap-2 items-center justify-center lg:mt-6 md:mt-24 mt-12 w-full font-montserrat'>
                     
                     <div className='w-36 h-56 rounded-md border border-secondary bg-secondary backdrop-blur-lg bg-clip-padding backdrop-filter bg-opacity-5 flex flex-col items-center justify-center relative'>
                         <img src={Silver} alt="second" className='absolute md:-top-16 -top-8' />
